@@ -1,0 +1,10 @@
+*.errMessage max_size:512
+*.firmwareVersion max_size:16
+*.deviceSerialNo max_size:64
+*.*hash* max_size:512
+*.*pubkey* max_size:512
+*.hdPath max_size:512
+*.result max_size:512
+*.R      max_size:512
+*.S      max_size:512
+*.signature max_size:128

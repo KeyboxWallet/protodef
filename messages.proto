@@ -1,0 +1,119 @@
+syntax = "proto3";
+
+// 通用消息类型
+
+
+message RequestRejected {
+    uint32 requestId = 1;
+    int32 errCode = 2;
+    string errMessage = 3;
+}
+
+
+// 无消息体，表示正面反馈
+message GenericConfirmReply {
+    
+}
+
+message GetModeAndVersionRequest {
+
+}
+
+enum DeviceMode {
+    MODE_BOOTLOADER = 0;
+    MODE_APP = 1;
+}
+
+message GetModeAndVersionReply {
+    DeviceMode mode = 1; // 'boot
+    string firmwareVersion = 2;
+    string deviceSerialNo  = 3;
+}
+// BootLoader特定功能消息类型
+
+
+message UpgradeStartRequest {
+    string firmwareVersion = 1;
+    bytes sha256hash = 2;
+}
+
+message SendUpgradeFirmware {
+    string firmwareVersion = 1;
+    bytes sha256hash = 2;
+    bytes signature = 3;
+    bytes firmware = 4;
+}
+
+message WriteSerialNo {
+    string deviceSerialNo = 1;
+}
+
+message WriteSerialNoReply {
+    bool writeSuccess = 1; // 是否写入成功
+    string deviceSerialNo = 2; //写入成功，新的设备号；否则，老的设备号 
+}
+
+message LockSerialNo {
+
+}
+
+message lockSerialNoReply {
+    bool lockSuccess = 1; // 是否锁定成功
+    string deviceSerialNo = 2; //最终锁定的设备号； 
+}
+// App特定功能消息
+
+message EccSignOptions {
+    bool rfc6979 = 1;
+    bool graphene_canonize = 2;
+}
+
+enum EccAlgorithm {
+    SECP256K1 = 0;
+}
+
+message EccSignRequest {
+    string hdPath = 1;
+    bytes hash = 2;
+    EccAlgorithm algorithm = 3;
+    EccSignOptions options = 4;
+}
+
+message EccSignResult {
+    string hdPath = 1;
+    bytes  pubkey = 2;
+    bytes  hash  = 3;
+    bytes  R = 4;
+    bytes  S = 5;
+    uint32  recover_param = 6;
+}
+
+message EccGetPublicKeyRequest {
+    string hdPath = 1;
+    EccAlgorithm algorithm = 2;
+}
+
+message EccGetPublicKeyReply {
+    string hdPath = 1;
+    EccAlgorithm algorithm = 2;
+    bytes pubkey = 3;
+}
+
+message EccMultiplyRequest {
+    string hdPath = 1;
+    EccAlgorithm algorithm = 2;
+    bytes input_pubkey = 3;
+}
+
+message EccMultiplyReply {
+    string hdPath = 1;
+    EccAlgorithm algorithm = 2;
+    bytes input_pubkey = 3;
+    bytes dev_pubkey = 4;
+    bytes result = 5;
+}
+
+message EraseDataRequest {
+
+}
+
