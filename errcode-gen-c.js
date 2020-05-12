@@ -7,6 +7,7 @@ var outString =
 #ifndef _KEYBOX_ERROR_CODE_INCLUDE_
 #define _KEYBOX_ERROR_CODE_INCLUDE_
 
+// auto-generated file. don't edit this file manually.
 `;
 
 function transformKey(KeyName){

@@ -2,6 +2,7 @@
 #ifndef _KEYBOX_ERROR_CODE_INCLUDE_
 #define _KEYBOX_ERROR_CODE_INCLUDE_
 
+// auto-generated file. don't edit this file manually.
 #define KEYBOX_ERROR_OK 0
 #define KEYBOX_ERROR_GENERAL -1
 #define KEYBOX_ERROR_WALLET_NOT_INITIALIZED -2

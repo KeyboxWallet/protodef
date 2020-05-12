@@ -2,6 +2,7 @@
 #ifndef __KEYBOX_WALLET_MESSAGE_TYPE_
 #define __KEYBOX_WALLET_MESSAGE_TYPE_
 
+// auto-generated file. don't edit this file manually.
 #define MsgTypeLowLimit 0
 #define MsgTypeGenericConfirmReply 1
 #define MsgTypeRequestRejected 2

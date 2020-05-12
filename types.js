@@ -13,6 +13,8 @@ module.exports = {
     MsgTypeLockSerialNoReply: 9,
     MsgTypeUpgradeStartRequest: 10,
     MsgTypeSendUpgradeFirmware: 11,
+    MsgTypeEccGetExtendedPubkeyRequest: 12,
+    MsgTypeEccGetExtendedPubkeyReply: 13,
     MsgTypeEccSignRequest: 15,
     MsgTypeEccSignResult: 16,
     MsgTypeEccGetPublicKeyRequest: 17,
