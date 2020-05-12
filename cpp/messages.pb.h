@@ -152,6 +152,28 @@ inline bool DeviceMode_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<DeviceMode>(
     DeviceMode_descriptor(), name, value);
 }
+enum LockState {
+  UNKOWN = 0,
+  UNLOCKED = 1,
+  LOCKED = 2,
+  LockState_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  LockState_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+};
+bool LockState_IsValid(int value);
+const LockState LockState_MIN = UNKOWN;
+const LockState LockState_MAX = LOCKED;
+const int LockState_ARRAYSIZE = LockState_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* LockState_descriptor();
+inline const ::std::string& LockState_Name(LockState value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    LockState_descriptor(), value);
+}
+inline bool LockState_Parse(
+    const ::std::string& name, LockState* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<LockState>(
+    LockState_descriptor(), name, value);
+}
 enum EccAlgorithm {
   SECP256K1 = 0,
   EccAlgorithm_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
@@ -612,6 +634,12 @@ class GetModeAndVersionReply : public ::google::protobuf::Message /* @@protoc_in
   ::DeviceMode mode() const;
   void set_mode(::DeviceMode value);
 
+  // .LockState isLocked = 4;
+  void clear_islocked();
+  static const int kIsLockedFieldNumber = 4;
+  ::LockState islocked() const;
+  void set_islocked(::LockState value);
+
   // @@protoc_insertion_point(class_scope:GetModeAndVersionReply)
  private:
 
@@ -619,6 +647,7 @@ class GetModeAndVersionReply : public ::google::protobuf::Message /* @@protoc_in
   ::google::protobuf::internal::ArenaStringPtr firmwareversion_;
   ::google::protobuf::internal::ArenaStringPtr deviceserialno_;
   int mode_;
+  int islocked_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::protobuf_messages_2eproto::TableStruct;
 };
@@ -2914,6 +2943,20 @@ inline void GetModeAndVersionReply::set_allocated_deviceserialno(::std::string* 
   // @@protoc_insertion_point(field_set_allocated:GetModeAndVersionReply.deviceSerialNo)
 }
 
+// .LockState isLocked = 4;
+inline void GetModeAndVersionReply::clear_islocked() {
+  islocked_ = 0;
+}
+inline ::LockState GetModeAndVersionReply::islocked() const {
+  // @@protoc_insertion_point(field_get:GetModeAndVersionReply.isLocked)
+  return static_cast< ::LockState >(islocked_);
+}
+inline void GetModeAndVersionReply::set_islocked(::LockState value) {
+  
+  islocked_ = value;
+  // @@protoc_insertion_point(field_set:GetModeAndVersionReply.isLocked)
+}
+
 // -------------------------------------------------------------------
 
 // UpgradeStartRequest
@@ -4789,6 +4832,11 @@ template <> struct is_proto_enum< ::DeviceMode> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::DeviceMode>() {
   return ::DeviceMode_descriptor();
+}
+template <> struct is_proto_enum< ::LockState> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::LockState>() {
+  return ::LockState_descriptor();
 }
 template <> struct is_proto_enum< ::EccAlgorithm> : ::std::true_type {};
 template <>

@@ -428,7 +428,7 @@ void InitDefaults() {
 }
 
 ::google::protobuf::Metadata file_level_metadata[20];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[3];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
@@ -457,6 +457,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetModeAndVersionReply, mode_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetModeAndVersionReply, firmwareversion_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetModeAndVersionReply, deviceserialno_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::GetModeAndVersionReply, islocked_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::UpgradeStartRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -585,22 +586,22 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 8, -1, sizeof(::GenericConfirmReply)},
   { 13, -1, sizeof(::GetModeAndVersionRequest)},
   { 18, -1, sizeof(::GetModeAndVersionReply)},
-  { 26, -1, sizeof(::UpgradeStartRequest)},
-  { 33, -1, sizeof(::SendUpgradeFirmware)},
-  { 42, -1, sizeof(::WriteSerialNo)},
-  { 48, -1, sizeof(::WriteSerialNoReply)},
-  { 55, -1, sizeof(::LockSerialNo)},
-  { 60, -1, sizeof(::lockSerialNoReply)},
-  { 67, -1, sizeof(::EccSignOptions)},
-  { 74, -1, sizeof(::EccSignRequest)},
-  { 83, -1, sizeof(::EccSignResult)},
-  { 94, -1, sizeof(::EccGetPublicKeyRequest)},
-  { 101, -1, sizeof(::EccGetPublicKeyReply)},
-  { 109, -1, sizeof(::EccGetExtendedPublicKeyRequest)},
-  { 116, -1, sizeof(::EccGetExtendedPublicKeyReply)},
-  { 125, -1, sizeof(::EccMultiplyRequest)},
-  { 133, -1, sizeof(::EccMultiplyReply)},
-  { 143, -1, sizeof(::EraseDataRequest)},
+  { 27, -1, sizeof(::UpgradeStartRequest)},
+  { 34, -1, sizeof(::SendUpgradeFirmware)},
+  { 43, -1, sizeof(::WriteSerialNo)},
+  { 49, -1, sizeof(::WriteSerialNoReply)},
+  { 56, -1, sizeof(::LockSerialNo)},
+  { 61, -1, sizeof(::lockSerialNoReply)},
+  { 68, -1, sizeof(::EccSignOptions)},
+  { 75, -1, sizeof(::EccSignRequest)},
+  { 84, -1, sizeof(::EccSignResult)},
+  { 95, -1, sizeof(::EccGetPublicKeyRequest)},
+  { 102, -1, sizeof(::EccGetPublicKeyReply)},
+  { 110, -1, sizeof(::EccGetExtendedPublicKeyRequest)},
+  { 117, -1, sizeof(::EccGetExtendedPublicKeyReply)},
+  { 126, -1, sizeof(::EccMultiplyRequest)},
+  { 134, -1, sizeof(::EccMultiplyReply)},
+  { 144, -1, sizeof(::EraseDataRequest)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -650,46 +651,48 @@ void AddDescriptorsImpl() {
       "\n\016messages.proto\"I\n\017RequestRejected\022\021\n\tr"
       "equestId\030\001 \001(\r\022\017\n\007errCode\030\002 \001(\005\022\022\n\nerrMe"
       "ssage\030\003 \001(\t\"\025\n\023GenericConfirmReply\"\032\n\030Ge"
-      "tModeAndVersionRequest\"d\n\026GetModeAndVers"
-      "ionReply\022\031\n\004mode\030\001 \001(\0162\013.DeviceMode\022\027\n\017f"
-      "irmwareVersion\030\002 \001(\t\022\026\n\016deviceSerialNo\030\003"
-      " \001(\t\"B\n\023UpgradeStartRequest\022\027\n\017firmwareV"
-      "ersion\030\001 \001(\t\022\022\n\nsha256hash\030\002 \001(\014\"g\n\023Send"
-      "UpgradeFirmware\022\027\n\017firmwareVersion\030\001 \001(\t"
-      "\022\022\n\nsha256hash\030\002 \001(\014\022\021\n\tsignature\030\003 \001(\014\022"
-      "\020\n\010firmware\030\004 \001(\014\"\'\n\rWriteSerialNo\022\026\n\016de"
-      "viceSerialNo\030\001 \001(\t\"B\n\022WriteSerialNoReply"
-      "\022\024\n\014writeSuccess\030\001 \001(\010\022\026\n\016deviceSerialNo"
-      "\030\002 \001(\t\"\016\n\014LockSerialNo\"@\n\021lockSerialNoRe"
-      "ply\022\023\n\013lockSuccess\030\001 \001(\010\022\026\n\016deviceSerial"
-      "No\030\002 \001(\t\"<\n\016EccSignOptions\022\017\n\007rfc6979\030\001 "
-      "\001(\010\022\031\n\021graphene_canonize\030\002 \001(\010\"r\n\016EccSig"
-      "nRequest\022\016\n\006hdPath\030\001 \001(\t\022\014\n\004hash\030\002 \001(\014\022 "
-      "\n\talgorithm\030\003 \001(\0162\r.EccAlgorithm\022 \n\007opti"
-      "ons\030\004 \001(\0132\017.EccSignOptions\"j\n\rEccSignRes"
-      "ult\022\016\n\006hdPath\030\001 \001(\t\022\016\n\006pubkey\030\002 \001(\014\022\014\n\004h"
-      "ash\030\003 \001(\014\022\t\n\001R\030\004 \001(\014\022\t\n\001S\030\005 \001(\014\022\025\n\rrecov"
-      "er_param\030\006 \001(\r\"J\n\026EccGetPublicKeyRequest"
-      "\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.Ec"
-      "cAlgorithm\"X\n\024EccGetPublicKeyReply\022\016\n\006hd"
+      "tModeAndVersionRequest\"\202\001\n\026GetModeAndVer"
+      "sionReply\022\031\n\004mode\030\001 \001(\0162\013.DeviceMode\022\027\n\017"
+      "firmwareVersion\030\002 \001(\t\022\026\n\016deviceSerialNo\030"
+      "\003 \001(\t\022\034\n\010isLocked\030\004 \001(\0162\n.LockState\"B\n\023U"
+      "pgradeStartRequest\022\027\n\017firmwareVersion\030\001 "
+      "\001(\t\022\022\n\nsha256hash\030\002 \001(\014\"g\n\023SendUpgradeFi"
+      "rmware\022\027\n\017firmwareVersion\030\001 \001(\t\022\022\n\nsha25"
+      "6hash\030\002 \001(\014\022\021\n\tsignature\030\003 \001(\014\022\020\n\010firmwa"
+      "re\030\004 \001(\014\"\'\n\rWriteSerialNo\022\026\n\016deviceSeria"
+      "lNo\030\001 \001(\t\"B\n\022WriteSerialNoReply\022\024\n\014write"
+      "Success\030\001 \001(\010\022\026\n\016deviceSerialNo\030\002 \001(\t\"\016\n"
+      "\014LockSerialNo\"@\n\021lockSerialNoReply\022\023\n\013lo"
+      "ckSuccess\030\001 \001(\010\022\026\n\016deviceSerialNo\030\002 \001(\t\""
+      "<\n\016EccSignOptions\022\017\n\007rfc6979\030\001 \001(\010\022\031\n\021gr"
+      "aphene_canonize\030\002 \001(\010\"r\n\016EccSignRequest\022"
+      "\016\n\006hdPath\030\001 \001(\t\022\014\n\004hash\030\002 \001(\014\022 \n\talgorit"
+      "hm\030\003 \001(\0162\r.EccAlgorithm\022 \n\007options\030\004 \001(\013"
+      "2\017.EccSignOptions\"j\n\rEccSignResult\022\016\n\006hd"
+      "Path\030\001 \001(\t\022\016\n\006pubkey\030\002 \001(\014\022\014\n\004hash\030\003 \001(\014"
+      "\022\t\n\001R\030\004 \001(\014\022\t\n\001S\030\005 \001(\014\022\025\n\rrecover_param\030"
+      "\006 \001(\r\"J\n\026EccGetPublicKeyRequest\022\016\n\006hdPat"
+      "h\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.EccAlgorith"
+      "m\"X\n\024EccGetPublicKeyReply\022\016\n\006hdPath\030\001 \001("
+      "\t\022 \n\talgorithm\030\002 \001(\0162\r.EccAlgorithm\022\016\n\006p"
+      "ubkey\030\003 \001(\014\"R\n\036EccGetExtendedPublicKeyRe"
+      "quest\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\016"
+      "2\r.EccAlgorithm\"s\n\034EccGetExtendedPublicK"
+      "eyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001"
+      "(\0162\r.EccAlgorithm\022\016\n\006pubkey\030\003 \001(\014\022\021\n\tcha"
+      "inCode\030\004 \001(\014\"\\\n\022EccMultiplyRequest\022\016\n\006hd"
       "Path\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.EccAlgor"
-      "ithm\022\016\n\006pubkey\030\003 \001(\014\"R\n\036EccGetExtendedPu"
-      "blicKeyRequest\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgori"
-      "thm\030\002 \001(\0162\r.EccAlgorithm\"s\n\034EccGetExtend"
-      "edPublicKeyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgo"
-      "rithm\030\002 \001(\0162\r.EccAlgorithm\022\016\n\006pubkey\030\003 \001"
-      "(\014\022\021\n\tchainCode\030\004 \001(\014\"\\\n\022EccMultiplyRequ"
-      "est\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r"
-      ".EccAlgorithm\022\024\n\014input_pubkey\030\003 \001(\014\"~\n\020E"
-      "ccMultiplyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgor"
-      "ithm\030\002 \001(\0162\r.EccAlgorithm\022\024\n\014input_pubke"
-      "y\030\003 \001(\014\022\022\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 "
-      "\001(\014\"\022\n\020EraseDataRequest*/\n\nDeviceMode\022\023\n"
-      "\017MODE_BOOTLOADER\020\000\022\014\n\010MODE_APP\020\001*\035\n\014EccA"
-      "lgorithm\022\r\n\tSECP256K1\020\000b\006proto3"
+      "ithm\022\024\n\014input_pubkey\030\003 \001(\014\"~\n\020EccMultipl"
+      "yReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001("
+      "\0162\r.EccAlgorithm\022\024\n\014input_pubkey\030\003 \001(\014\022\022"
+      "\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 \001(\014\"\022\n\020Er"
+      "aseDataRequest*/\n\nDeviceMode\022\023\n\017MODE_BOO"
+      "TLOADER\020\000\022\014\n\010MODE_APP\020\001*1\n\tLockState\022\n\n\006"
+      "UNKOWN\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002*\035\n\014Ec"
+      "cAlgorithm\022\r\n\tSECP256K1\020\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1591);
+      descriptor, 1673);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages.proto", &protobuf_RegisterTypes);
 }
@@ -719,9 +722,24 @@ bool DeviceMode_IsValid(int value) {
   }
 }
 
-const ::google::protobuf::EnumDescriptor* EccAlgorithm_descriptor() {
+const ::google::protobuf::EnumDescriptor* LockState_descriptor() {
   protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_messages_2eproto::file_level_enum_descriptors[1];
+}
+bool LockState_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::google::protobuf::EnumDescriptor* EccAlgorithm_descriptor() {
+  protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_messages_2eproto::file_level_enum_descriptors[2];
 }
 bool EccAlgorithm_IsValid(int value) {
   switch (value) {
@@ -1422,6 +1440,7 @@ void GetModeAndVersionReply::InitAsDefaultInstance() {
 const int GetModeAndVersionReply::kModeFieldNumber;
 const int GetModeAndVersionReply::kFirmwareVersionFieldNumber;
 const int GetModeAndVersionReply::kDeviceSerialNoFieldNumber;
+const int GetModeAndVersionReply::kIsLockedFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 GetModeAndVersionReply::GetModeAndVersionReply()
@@ -1443,14 +1462,18 @@ GetModeAndVersionReply::GetModeAndVersionReply(const GetModeAndVersionReply& fro
   if (from.deviceserialno().size() > 0) {
     deviceserialno_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.deviceserialno_);
   }
-  mode_ = from.mode_;
+  ::memcpy(&mode_, &from.mode_,
+    static_cast<size_t>(reinterpret_cast<char*>(&islocked_) -
+    reinterpret_cast<char*>(&mode_)) + sizeof(islocked_));
   // @@protoc_insertion_point(copy_constructor:GetModeAndVersionReply)
 }
 
 void GetModeAndVersionReply::SharedCtor() {
   firmwareversion_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   deviceserialno_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  mode_ = 0;
+  ::memset(&mode_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&islocked_) -
+      reinterpret_cast<char*>(&mode_)) + sizeof(islocked_));
 }
 
 GetModeAndVersionReply::~GetModeAndVersionReply() {
@@ -1485,7 +1508,9 @@ void GetModeAndVersionReply::Clear() {
 
   firmwareversion_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   deviceserialno_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  mode_ = 0;
+  ::memset(&mode_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&islocked_) -
+      reinterpret_cast<char*>(&mode_)) + sizeof(islocked_));
   _internal_metadata_.Clear();
 }
 
@@ -1546,6 +1571,21 @@ bool GetModeAndVersionReply::MergePartialFromCodedStream(
         break;
       }
 
+      // .LockState isLocked = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_islocked(static_cast< ::LockState >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
       default: {
       handle_unusual:
         if (tag == 0) {
@@ -1598,6 +1638,12 @@ void GetModeAndVersionReply::SerializeWithCachedSizes(
       3, this->deviceserialno(), output);
   }
 
+  // .LockState isLocked = 4;
+  if (this->islocked() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      4, this->islocked(), output);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
@@ -1640,6 +1686,12 @@ void GetModeAndVersionReply::SerializeWithCachedSizes(
         3, this->deviceserialno(), target);
   }
 
+  // .LockState isLocked = 4;
+  if (this->islocked() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      4, this->islocked(), target);
+  }
+
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
@@ -1675,6 +1727,12 @@ size_t GetModeAndVersionReply::ByteSizeLong() const {
   if (this->mode() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->mode());
+  }
+
+  // .LockState isLocked = 4;
+  if (this->islocked() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->islocked());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1715,6 +1773,9 @@ void GetModeAndVersionReply::MergeFrom(const GetModeAndVersionReply& from) {
   if (from.mode() != 0) {
     set_mode(from.mode());
   }
+  if (from.islocked() != 0) {
+    set_islocked(from.islocked());
+  }
 }
 
 void GetModeAndVersionReply::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1746,6 +1807,7 @@ void GetModeAndVersionReply::InternalSwap(GetModeAndVersionReply* other) {
   deviceserialno_.Swap(&other->deviceserialno_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(mode_, other->mode_);
+  swap(islocked_, other->islocked_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 

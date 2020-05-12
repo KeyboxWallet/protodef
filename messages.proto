@@ -24,10 +24,17 @@ enum DeviceMode {
     MODE_APP = 1;
 }
 
+enum LockState {
+    UNKOWN = 0;
+    UNLOCKED = 1;
+    LOCKED = 2;
+}
+
 message GetModeAndVersionReply {
     DeviceMode mode = 1; // 'boot
     string firmwareVersion = 2;
     string deviceSerialNo  = 3;
+    LockState isLocked = 4; // app mode only
 }
 // BootLoader特定功能消息类型
 
