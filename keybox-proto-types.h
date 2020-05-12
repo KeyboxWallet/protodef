@@ -14,6 +14,8 @@
 #define MsgTypeLockSerialNoReply 9
 #define MsgTypeUpgradeStartRequest 10
 #define MsgTypeSendUpgradeFirmware 11
+#define MsgTypeEccGetExtendedPubkeyRequest 12
+#define MsgTypeEccGetExtendedPubkeyReply 13
 #define MsgTypeEccSignRequest 15
 #define MsgTypeEccSignResult 16
 #define MsgTypeEccGetPublicKeyRequest 17

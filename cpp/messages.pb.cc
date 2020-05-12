@@ -97,6 +97,16 @@ class EccGetPublicKeyReplyDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<EccGetPublicKeyReply>
       _instance;
 } _EccGetPublicKeyReply_default_instance_;
+class EccGetExtendedPublicKeyRequestDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EccGetExtendedPublicKeyRequest>
+      _instance;
+} _EccGetExtendedPublicKeyRequest_default_instance_;
+class EccGetExtendedPublicKeyReplyDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<EccGetExtendedPublicKeyReply>
+      _instance;
+} _EccGetExtendedPublicKeyReply_default_instance_;
 class EccMultiplyRequestDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<EccMultiplyRequest>
@@ -324,6 +334,34 @@ static void InitDefaultsEccGetPublicKeyReply() {
 ::google::protobuf::internal::SCCInfo<0> scc_info_EccGetPublicKeyReply =
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsEccGetPublicKeyReply}, {}};
 
+static void InitDefaultsEccGetExtendedPublicKeyRequest() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_EccGetExtendedPublicKeyRequest_default_instance_;
+    new (ptr) ::EccGetExtendedPublicKeyRequest();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::EccGetExtendedPublicKeyRequest::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_EccGetExtendedPublicKeyRequest =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsEccGetExtendedPublicKeyRequest}, {}};
+
+static void InitDefaultsEccGetExtendedPublicKeyReply() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_EccGetExtendedPublicKeyReply_default_instance_;
+    new (ptr) ::EccGetExtendedPublicKeyReply();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::EccGetExtendedPublicKeyReply::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_EccGetExtendedPublicKeyReply =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsEccGetExtendedPublicKeyReply}, {}};
+
 static void InitDefaultsEccMultiplyRequest() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -382,12 +420,14 @@ void InitDefaults() {
   ::google::protobuf::internal::InitSCC(&scc_info_EccSignResult.base);
   ::google::protobuf::internal::InitSCC(&scc_info_EccGetPublicKeyRequest.base);
   ::google::protobuf::internal::InitSCC(&scc_info_EccGetPublicKeyReply.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_EccGetExtendedPublicKeyRequest.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_EccGetExtendedPublicKeyReply.base);
   ::google::protobuf::internal::InitSCC(&scc_info_EccMultiplyRequest.base);
   ::google::protobuf::internal::InitSCC(&scc_info_EccMultiplyReply.base);
   ::google::protobuf::internal::InitSCC(&scc_info_EraseDataRequest.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[18];
+::google::protobuf::Metadata file_level_metadata[20];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -501,6 +541,22 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetPublicKeyReply, algorithm_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetPublicKeyReply, pubkey_),
   ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyRequest, hdpath_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyRequest, algorithm_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyReply, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyReply, hdpath_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyReply, algorithm_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyReply, pubkey_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccGetExtendedPublicKeyReply, chaincode_),
+  ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::EccMultiplyRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -540,9 +596,11 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 83, -1, sizeof(::EccSignResult)},
   { 94, -1, sizeof(::EccGetPublicKeyRequest)},
   { 101, -1, sizeof(::EccGetPublicKeyReply)},
-  { 109, -1, sizeof(::EccMultiplyRequest)},
-  { 117, -1, sizeof(::EccMultiplyReply)},
-  { 127, -1, sizeof(::EraseDataRequest)},
+  { 109, -1, sizeof(::EccGetExtendedPublicKeyRequest)},
+  { 116, -1, sizeof(::EccGetExtendedPublicKeyReply)},
+  { 125, -1, sizeof(::EccMultiplyRequest)},
+  { 133, -1, sizeof(::EccMultiplyReply)},
+  { 143, -1, sizeof(::EraseDataRequest)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -561,6 +619,8 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::_EccSignResult_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_EccGetPublicKeyRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_EccGetPublicKeyReply_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::_EccGetExtendedPublicKeyRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::_EccGetExtendedPublicKeyReply_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_EccMultiplyRequest_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_EccMultiplyReply_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_EraseDataRequest_default_instance_),
@@ -581,7 +641,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 18);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 20);
 }
 
 void AddDescriptorsImpl() {
@@ -613,18 +673,23 @@ void AddDescriptorsImpl() {
       "\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.Ec"
       "cAlgorithm\"X\n\024EccGetPublicKeyReply\022\016\n\006hd"
       "Path\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.EccAlgor"
-      "ithm\022\016\n\006pubkey\030\003 \001(\014\"\\\n\022EccMultiplyReque"
-      "st\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r."
-      "EccAlgorithm\022\024\n\014input_pubkey\030\003 \001(\014\"~\n\020Ec"
-      "cMultiplyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgori"
-      "thm\030\002 \001(\0162\r.EccAlgorithm\022\024\n\014input_pubkey"
-      "\030\003 \001(\014\022\022\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 \001"
-      "(\014\"\022\n\020EraseDataRequest*/\n\nDeviceMode\022\023\n\017"
-      "MODE_BOOTLOADER\020\000\022\014\n\010MODE_APP\020\001*\035\n\014EccAl"
-      "gorithm\022\r\n\tSECP256K1\020\000b\006proto3"
+      "ithm\022\016\n\006pubkey\030\003 \001(\014\"R\n\036EccGetExtendedPu"
+      "blicKeyRequest\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgori"
+      "thm\030\002 \001(\0162\r.EccAlgorithm\"s\n\034EccGetExtend"
+      "edPublicKeyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgo"
+      "rithm\030\002 \001(\0162\r.EccAlgorithm\022\016\n\006pubkey\030\003 \001"
+      "(\014\022\021\n\tchainCode\030\004 \001(\014\"\\\n\022EccMultiplyRequ"
+      "est\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r"
+      ".EccAlgorithm\022\024\n\014input_pubkey\030\003 \001(\014\"~\n\020E"
+      "ccMultiplyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgor"
+      "ithm\030\002 \001(\0162\r.EccAlgorithm\022\024\n\014input_pubke"
+      "y\030\003 \001(\014\022\022\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 "
+      "\001(\014\"\022\n\020EraseDataRequest*/\n\nDeviceMode\022\023\n"
+      "\017MODE_BOOTLOADER\020\000\022\014\n\010MODE_APP\020\001*\035\n\014EccA"
+      "lgorithm\022\r\n\tSECP256K1\020\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1390);
+      descriptor, 1591);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages.proto", &protobuf_RegisterTypes);
 }
@@ -5057,6 +5122,664 @@ void EccGetPublicKeyReply::InternalSwap(EccGetPublicKeyReply* other) {
 
 // ===================================================================
 
+void EccGetExtendedPublicKeyRequest::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int EccGetExtendedPublicKeyRequest::kHdPathFieldNumber;
+const int EccGetExtendedPublicKeyRequest::kAlgorithmFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EccGetExtendedPublicKeyRequest::EccGetExtendedPublicKeyRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_EccGetExtendedPublicKeyRequest.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:EccGetExtendedPublicKeyRequest)
+}
+EccGetExtendedPublicKeyRequest::EccGetExtendedPublicKeyRequest(const EccGetExtendedPublicKeyRequest& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  hdpath_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.hdpath().size() > 0) {
+    hdpath_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.hdpath_);
+  }
+  algorithm_ = from.algorithm_;
+  // @@protoc_insertion_point(copy_constructor:EccGetExtendedPublicKeyRequest)
+}
+
+void EccGetExtendedPublicKeyRequest::SharedCtor() {
+  hdpath_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  algorithm_ = 0;
+}
+
+EccGetExtendedPublicKeyRequest::~EccGetExtendedPublicKeyRequest() {
+  // @@protoc_insertion_point(destructor:EccGetExtendedPublicKeyRequest)
+  SharedDtor();
+}
+
+void EccGetExtendedPublicKeyRequest::SharedDtor() {
+  hdpath_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void EccGetExtendedPublicKeyRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* EccGetExtendedPublicKeyRequest::descriptor() {
+  ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const EccGetExtendedPublicKeyRequest& EccGetExtendedPublicKeyRequest::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_EccGetExtendedPublicKeyRequest.base);
+  return *internal_default_instance();
+}
+
+
+void EccGetExtendedPublicKeyRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:EccGetExtendedPublicKeyRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  hdpath_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  algorithm_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool EccGetExtendedPublicKeyRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:EccGetExtendedPublicKeyRequest)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string hdPath = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_hdpath()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->hdpath().data(), static_cast<int>(this->hdpath().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "EccGetExtendedPublicKeyRequest.hdPath"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .EccAlgorithm algorithm = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_algorithm(static_cast< ::EccAlgorithm >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:EccGetExtendedPublicKeyRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:EccGetExtendedPublicKeyRequest)
+  return false;
+#undef DO_
+}
+
+void EccGetExtendedPublicKeyRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:EccGetExtendedPublicKeyRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string hdPath = 1;
+  if (this->hdpath().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->hdpath().data(), static_cast<int>(this->hdpath().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "EccGetExtendedPublicKeyRequest.hdPath");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->hdpath(), output);
+  }
+
+  // .EccAlgorithm algorithm = 2;
+  if (this->algorithm() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->algorithm(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:EccGetExtendedPublicKeyRequest)
+}
+
+::google::protobuf::uint8* EccGetExtendedPublicKeyRequest::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:EccGetExtendedPublicKeyRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string hdPath = 1;
+  if (this->hdpath().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->hdpath().data(), static_cast<int>(this->hdpath().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "EccGetExtendedPublicKeyRequest.hdPath");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->hdpath(), target);
+  }
+
+  // .EccAlgorithm algorithm = 2;
+  if (this->algorithm() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->algorithm(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:EccGetExtendedPublicKeyRequest)
+  return target;
+}
+
+size_t EccGetExtendedPublicKeyRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:EccGetExtendedPublicKeyRequest)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string hdPath = 1;
+  if (this->hdpath().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->hdpath());
+  }
+
+  // .EccAlgorithm algorithm = 2;
+  if (this->algorithm() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->algorithm());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void EccGetExtendedPublicKeyRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:EccGetExtendedPublicKeyRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const EccGetExtendedPublicKeyRequest* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const EccGetExtendedPublicKeyRequest>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:EccGetExtendedPublicKeyRequest)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:EccGetExtendedPublicKeyRequest)
+    MergeFrom(*source);
+  }
+}
+
+void EccGetExtendedPublicKeyRequest::MergeFrom(const EccGetExtendedPublicKeyRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:EccGetExtendedPublicKeyRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.hdpath().size() > 0) {
+
+    hdpath_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.hdpath_);
+  }
+  if (from.algorithm() != 0) {
+    set_algorithm(from.algorithm());
+  }
+}
+
+void EccGetExtendedPublicKeyRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:EccGetExtendedPublicKeyRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void EccGetExtendedPublicKeyRequest::CopyFrom(const EccGetExtendedPublicKeyRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:EccGetExtendedPublicKeyRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EccGetExtendedPublicKeyRequest::IsInitialized() const {
+  return true;
+}
+
+void EccGetExtendedPublicKeyRequest::Swap(EccGetExtendedPublicKeyRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void EccGetExtendedPublicKeyRequest::InternalSwap(EccGetExtendedPublicKeyRequest* other) {
+  using std::swap;
+  hdpath_.Swap(&other->hdpath_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(algorithm_, other->algorithm_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata EccGetExtendedPublicKeyRequest::GetMetadata() const {
+  protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void EccGetExtendedPublicKeyReply::InitAsDefaultInstance() {
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int EccGetExtendedPublicKeyReply::kHdPathFieldNumber;
+const int EccGetExtendedPublicKeyReply::kAlgorithmFieldNumber;
+const int EccGetExtendedPublicKeyReply::kPubkeyFieldNumber;
+const int EccGetExtendedPublicKeyReply::kChainCodeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+EccGetExtendedPublicKeyReply::EccGetExtendedPublicKeyReply()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  ::google::protobuf::internal::InitSCC(
+      &protobuf_messages_2eproto::scc_info_EccGetExtendedPublicKeyReply.base);
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:EccGetExtendedPublicKeyReply)
+}
+EccGetExtendedPublicKeyReply::EccGetExtendedPublicKeyReply(const EccGetExtendedPublicKeyReply& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  hdpath_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.hdpath().size() > 0) {
+    hdpath_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.hdpath_);
+  }
+  pubkey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.pubkey().size() > 0) {
+    pubkey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pubkey_);
+  }
+  chaincode_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.chaincode().size() > 0) {
+    chaincode_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.chaincode_);
+  }
+  algorithm_ = from.algorithm_;
+  // @@protoc_insertion_point(copy_constructor:EccGetExtendedPublicKeyReply)
+}
+
+void EccGetExtendedPublicKeyReply::SharedCtor() {
+  hdpath_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pubkey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  chaincode_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  algorithm_ = 0;
+}
+
+EccGetExtendedPublicKeyReply::~EccGetExtendedPublicKeyReply() {
+  // @@protoc_insertion_point(destructor:EccGetExtendedPublicKeyReply)
+  SharedDtor();
+}
+
+void EccGetExtendedPublicKeyReply::SharedDtor() {
+  hdpath_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pubkey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  chaincode_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void EccGetExtendedPublicKeyReply::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ::google::protobuf::Descriptor* EccGetExtendedPublicKeyReply::descriptor() {
+  ::protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const EccGetExtendedPublicKeyReply& EccGetExtendedPublicKeyReply::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_messages_2eproto::scc_info_EccGetExtendedPublicKeyReply.base);
+  return *internal_default_instance();
+}
+
+
+void EccGetExtendedPublicKeyReply::Clear() {
+// @@protoc_insertion_point(message_clear_start:EccGetExtendedPublicKeyReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  hdpath_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  pubkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  chaincode_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  algorithm_ = 0;
+  _internal_metadata_.Clear();
+}
+
+bool EccGetExtendedPublicKeyReply::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:EccGetExtendedPublicKeyReply)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string hdPath = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_hdpath()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->hdpath().data(), static_cast<int>(this->hdpath().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "EccGetExtendedPublicKeyReply.hdPath"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .EccAlgorithm algorithm = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_algorithm(static_cast< ::EccAlgorithm >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes pubkey = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_pubkey()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bytes chainCode = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
+                input, this->mutable_chaincode()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:EccGetExtendedPublicKeyReply)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:EccGetExtendedPublicKeyReply)
+  return false;
+#undef DO_
+}
+
+void EccGetExtendedPublicKeyReply::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:EccGetExtendedPublicKeyReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string hdPath = 1;
+  if (this->hdpath().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->hdpath().data(), static_cast<int>(this->hdpath().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "EccGetExtendedPublicKeyReply.hdPath");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->hdpath(), output);
+  }
+
+  // .EccAlgorithm algorithm = 2;
+  if (this->algorithm() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      2, this->algorithm(), output);
+  }
+
+  // bytes pubkey = 3;
+  if (this->pubkey().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      3, this->pubkey(), output);
+  }
+
+  // bytes chainCode = 4;
+  if (this->chaincode().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
+      4, this->chaincode(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:EccGetExtendedPublicKeyReply)
+}
+
+::google::protobuf::uint8* EccGetExtendedPublicKeyReply::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:EccGetExtendedPublicKeyReply)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string hdPath = 1;
+  if (this->hdpath().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->hdpath().data(), static_cast<int>(this->hdpath().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "EccGetExtendedPublicKeyReply.hdPath");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->hdpath(), target);
+  }
+
+  // .EccAlgorithm algorithm = 2;
+  if (this->algorithm() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      2, this->algorithm(), target);
+  }
+
+  // bytes pubkey = 3;
+  if (this->pubkey().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        3, this->pubkey(), target);
+  }
+
+  // bytes chainCode = 4;
+  if (this->chaincode().size() > 0) {
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
+        4, this->chaincode(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:EccGetExtendedPublicKeyReply)
+  return target;
+}
+
+size_t EccGetExtendedPublicKeyReply::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:EccGetExtendedPublicKeyReply)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string hdPath = 1;
+  if (this->hdpath().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->hdpath());
+  }
+
+  // bytes pubkey = 3;
+  if (this->pubkey().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->pubkey());
+  }
+
+  // bytes chainCode = 4;
+  if (this->chaincode().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::BytesSize(
+        this->chaincode());
+  }
+
+  // .EccAlgorithm algorithm = 2;
+  if (this->algorithm() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->algorithm());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void EccGetExtendedPublicKeyReply::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:EccGetExtendedPublicKeyReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  const EccGetExtendedPublicKeyReply* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const EccGetExtendedPublicKeyReply>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:EccGetExtendedPublicKeyReply)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:EccGetExtendedPublicKeyReply)
+    MergeFrom(*source);
+  }
+}
+
+void EccGetExtendedPublicKeyReply::MergeFrom(const EccGetExtendedPublicKeyReply& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:EccGetExtendedPublicKeyReply)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.hdpath().size() > 0) {
+
+    hdpath_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.hdpath_);
+  }
+  if (from.pubkey().size() > 0) {
+
+    pubkey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.pubkey_);
+  }
+  if (from.chaincode().size() > 0) {
+
+    chaincode_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.chaincode_);
+  }
+  if (from.algorithm() != 0) {
+    set_algorithm(from.algorithm());
+  }
+}
+
+void EccGetExtendedPublicKeyReply::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:EccGetExtendedPublicKeyReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void EccGetExtendedPublicKeyReply::CopyFrom(const EccGetExtendedPublicKeyReply& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:EccGetExtendedPublicKeyReply)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool EccGetExtendedPublicKeyReply::IsInitialized() const {
+  return true;
+}
+
+void EccGetExtendedPublicKeyReply::Swap(EccGetExtendedPublicKeyReply* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void EccGetExtendedPublicKeyReply::InternalSwap(EccGetExtendedPublicKeyReply* other) {
+  using std::swap;
+  hdpath_.Swap(&other->hdpath_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  pubkey_.Swap(&other->pubkey_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  chaincode_.Swap(&other->chaincode_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(algorithm_, other->algorithm_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+}
+
+::google::protobuf::Metadata EccGetExtendedPublicKeyReply::GetMetadata() const {
+  protobuf_messages_2eproto::protobuf_AssignDescriptorsOnce();
+  return ::protobuf_messages_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
 void EccMultiplyRequest::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
@@ -6031,6 +6754,12 @@ template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::EccGetPublicKeyRequest* Arena::C
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::EccGetPublicKeyReply* Arena::CreateMaybeMessage< ::EccGetPublicKeyReply >(Arena* arena) {
   return Arena::CreateInternal< ::EccGetPublicKeyReply >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::EccGetExtendedPublicKeyRequest* Arena::CreateMaybeMessage< ::EccGetExtendedPublicKeyRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::EccGetExtendedPublicKeyRequest >(arena);
+}
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::EccGetExtendedPublicKeyReply* Arena::CreateMaybeMessage< ::EccGetExtendedPublicKeyReply >(Arena* arena) {
+  return Arena::CreateInternal< ::EccGetExtendedPublicKeyReply >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::EccMultiplyRequest* Arena::CreateMaybeMessage< ::EccMultiplyRequest >(Arena* arena) {
   return Arena::CreateInternal< ::EccMultiplyRequest >(arena);

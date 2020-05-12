@@ -3,6 +3,7 @@
 *.deviceSerialNo max_size:64
 *.*hash* max_size:512
 *.*pubkey* max_size:512
+*.*chainCode* max_size:256
 *.hdPath max_size:512
 *.result max_size:512
 *.R      max_size:512

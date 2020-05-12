@@ -39,13 +39,19 @@ namespace protobuf_messages_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[18];
+  static const ::google::protobuf::internal::ParseTable schema[20];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors();
 }  // namespace protobuf_messages_2eproto
+class EccGetExtendedPublicKeyReply;
+class EccGetExtendedPublicKeyReplyDefaultTypeInternal;
+extern EccGetExtendedPublicKeyReplyDefaultTypeInternal _EccGetExtendedPublicKeyReply_default_instance_;
+class EccGetExtendedPublicKeyRequest;
+class EccGetExtendedPublicKeyRequestDefaultTypeInternal;
+extern EccGetExtendedPublicKeyRequestDefaultTypeInternal _EccGetExtendedPublicKeyRequest_default_instance_;
 class EccGetPublicKeyReply;
 class EccGetPublicKeyReplyDefaultTypeInternal;
 extern EccGetPublicKeyReplyDefaultTypeInternal _EccGetPublicKeyReply_default_instance_;
@@ -102,6 +108,8 @@ class lockSerialNoReplyDefaultTypeInternal;
 extern lockSerialNoReplyDefaultTypeInternal _lockSerialNoReply_default_instance_;
 namespace google {
 namespace protobuf {
+template<> ::EccGetExtendedPublicKeyReply* Arena::CreateMaybeMessage<::EccGetExtendedPublicKeyReply>(Arena*);
+template<> ::EccGetExtendedPublicKeyRequest* Arena::CreateMaybeMessage<::EccGetExtendedPublicKeyRequest>(Arena*);
 template<> ::EccGetPublicKeyReply* Arena::CreateMaybeMessage<::EccGetPublicKeyReply>(Arena*);
 template<> ::EccGetPublicKeyRequest* Arena::CreateMaybeMessage<::EccGetPublicKeyRequest>(Arena*);
 template<> ::EccMultiplyReply* Arena::CreateMaybeMessage<::EccMultiplyReply>(Arena*);
@@ -2026,6 +2034,272 @@ class EccGetPublicKeyReply : public ::google::protobuf::Message /* @@protoc_inse
 };
 // -------------------------------------------------------------------
 
+class EccGetExtendedPublicKeyRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:EccGetExtendedPublicKeyRequest) */ {
+ public:
+  EccGetExtendedPublicKeyRequest();
+  virtual ~EccGetExtendedPublicKeyRequest();
+
+  EccGetExtendedPublicKeyRequest(const EccGetExtendedPublicKeyRequest& from);
+
+  inline EccGetExtendedPublicKeyRequest& operator=(const EccGetExtendedPublicKeyRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  EccGetExtendedPublicKeyRequest(EccGetExtendedPublicKeyRequest&& from) noexcept
+    : EccGetExtendedPublicKeyRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline EccGetExtendedPublicKeyRequest& operator=(EccGetExtendedPublicKeyRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const EccGetExtendedPublicKeyRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const EccGetExtendedPublicKeyRequest* internal_default_instance() {
+    return reinterpret_cast<const EccGetExtendedPublicKeyRequest*>(
+               &_EccGetExtendedPublicKeyRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    15;
+
+  void Swap(EccGetExtendedPublicKeyRequest* other);
+  friend void swap(EccGetExtendedPublicKeyRequest& a, EccGetExtendedPublicKeyRequest& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline EccGetExtendedPublicKeyRequest* New() const final {
+    return CreateMaybeMessage<EccGetExtendedPublicKeyRequest>(NULL);
+  }
+
+  EccGetExtendedPublicKeyRequest* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<EccGetExtendedPublicKeyRequest>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const EccGetExtendedPublicKeyRequest& from);
+  void MergeFrom(const EccGetExtendedPublicKeyRequest& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(EccGetExtendedPublicKeyRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string hdPath = 1;
+  void clear_hdpath();
+  static const int kHdPathFieldNumber = 1;
+  const ::std::string& hdpath() const;
+  void set_hdpath(const ::std::string& value);
+  #if LANG_CXX11
+  void set_hdpath(::std::string&& value);
+  #endif
+  void set_hdpath(const char* value);
+  void set_hdpath(const char* value, size_t size);
+  ::std::string* mutable_hdpath();
+  ::std::string* release_hdpath();
+  void set_allocated_hdpath(::std::string* hdpath);
+
+  // .EccAlgorithm algorithm = 2;
+  void clear_algorithm();
+  static const int kAlgorithmFieldNumber = 2;
+  ::EccAlgorithm algorithm() const;
+  void set_algorithm(::EccAlgorithm value);
+
+  // @@protoc_insertion_point(class_scope:EccGetExtendedPublicKeyRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr hdpath_;
+  int algorithm_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_messages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class EccGetExtendedPublicKeyReply : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:EccGetExtendedPublicKeyReply) */ {
+ public:
+  EccGetExtendedPublicKeyReply();
+  virtual ~EccGetExtendedPublicKeyReply();
+
+  EccGetExtendedPublicKeyReply(const EccGetExtendedPublicKeyReply& from);
+
+  inline EccGetExtendedPublicKeyReply& operator=(const EccGetExtendedPublicKeyReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  EccGetExtendedPublicKeyReply(EccGetExtendedPublicKeyReply&& from) noexcept
+    : EccGetExtendedPublicKeyReply() {
+    *this = ::std::move(from);
+  }
+
+  inline EccGetExtendedPublicKeyReply& operator=(EccGetExtendedPublicKeyReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const EccGetExtendedPublicKeyReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const EccGetExtendedPublicKeyReply* internal_default_instance() {
+    return reinterpret_cast<const EccGetExtendedPublicKeyReply*>(
+               &_EccGetExtendedPublicKeyReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  void Swap(EccGetExtendedPublicKeyReply* other);
+  friend void swap(EccGetExtendedPublicKeyReply& a, EccGetExtendedPublicKeyReply& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline EccGetExtendedPublicKeyReply* New() const final {
+    return CreateMaybeMessage<EccGetExtendedPublicKeyReply>(NULL);
+  }
+
+  EccGetExtendedPublicKeyReply* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<EccGetExtendedPublicKeyReply>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const EccGetExtendedPublicKeyReply& from);
+  void MergeFrom(const EccGetExtendedPublicKeyReply& from);
+  void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(EccGetExtendedPublicKeyReply* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string hdPath = 1;
+  void clear_hdpath();
+  static const int kHdPathFieldNumber = 1;
+  const ::std::string& hdpath() const;
+  void set_hdpath(const ::std::string& value);
+  #if LANG_CXX11
+  void set_hdpath(::std::string&& value);
+  #endif
+  void set_hdpath(const char* value);
+  void set_hdpath(const char* value, size_t size);
+  ::std::string* mutable_hdpath();
+  ::std::string* release_hdpath();
+  void set_allocated_hdpath(::std::string* hdpath);
+
+  // bytes pubkey = 3;
+  void clear_pubkey();
+  static const int kPubkeyFieldNumber = 3;
+  const ::std::string& pubkey() const;
+  void set_pubkey(const ::std::string& value);
+  #if LANG_CXX11
+  void set_pubkey(::std::string&& value);
+  #endif
+  void set_pubkey(const char* value);
+  void set_pubkey(const void* value, size_t size);
+  ::std::string* mutable_pubkey();
+  ::std::string* release_pubkey();
+  void set_allocated_pubkey(::std::string* pubkey);
+
+  // bytes chainCode = 4;
+  void clear_chaincode();
+  static const int kChainCodeFieldNumber = 4;
+  const ::std::string& chaincode() const;
+  void set_chaincode(const ::std::string& value);
+  #if LANG_CXX11
+  void set_chaincode(::std::string&& value);
+  #endif
+  void set_chaincode(const char* value);
+  void set_chaincode(const void* value, size_t size);
+  ::std::string* mutable_chaincode();
+  ::std::string* release_chaincode();
+  void set_allocated_chaincode(::std::string* chaincode);
+
+  // .EccAlgorithm algorithm = 2;
+  void clear_algorithm();
+  static const int kAlgorithmFieldNumber = 2;
+  ::EccAlgorithm algorithm() const;
+  void set_algorithm(::EccAlgorithm value);
+
+  // @@protoc_insertion_point(class_scope:EccGetExtendedPublicKeyReply)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr hdpath_;
+  ::google::protobuf::internal::ArenaStringPtr pubkey_;
+  ::google::protobuf::internal::ArenaStringPtr chaincode_;
+  int algorithm_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::protobuf_messages_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class EccMultiplyRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:EccMultiplyRequest) */ {
  public:
   EccMultiplyRequest();
@@ -2061,7 +2335,7 @@ class EccMultiplyRequest : public ::google::protobuf::Message /* @@protoc_insert
                &_EccMultiplyRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    15;
+    17;
 
   void Swap(EccMultiplyRequest* other);
   friend void swap(EccMultiplyRequest& a, EccMultiplyRequest& b) {
@@ -2194,7 +2468,7 @@ class EccMultiplyReply : public ::google::protobuf::Message /* @@protoc_insertio
                &_EccMultiplyReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    16;
+    18;
 
   void Swap(EccMultiplyReply* other);
   friend void swap(EccMultiplyReply& a, EccMultiplyReply& b) {
@@ -2357,7 +2631,7 @@ class EraseDataRequest : public ::google::protobuf::Message /* @@protoc_insertio
                &_EraseDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    19;
 
   void Swap(EraseDataRequest* other);
   friend void swap(EraseDataRequest& a, EraseDataRequest& b) {
@@ -3859,6 +4133,254 @@ inline void EccGetPublicKeyReply::set_allocated_pubkey(::std::string* pubkey) {
 
 // -------------------------------------------------------------------
 
+// EccGetExtendedPublicKeyRequest
+
+// string hdPath = 1;
+inline void EccGetExtendedPublicKeyRequest::clear_hdpath() {
+  hdpath_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& EccGetExtendedPublicKeyRequest::hdpath() const {
+  // @@protoc_insertion_point(field_get:EccGetExtendedPublicKeyRequest.hdPath)
+  return hdpath_.GetNoArena();
+}
+inline void EccGetExtendedPublicKeyRequest::set_hdpath(const ::std::string& value) {
+  
+  hdpath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:EccGetExtendedPublicKeyRequest.hdPath)
+}
+#if LANG_CXX11
+inline void EccGetExtendedPublicKeyRequest::set_hdpath(::std::string&& value) {
+  
+  hdpath_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:EccGetExtendedPublicKeyRequest.hdPath)
+}
+#endif
+inline void EccGetExtendedPublicKeyRequest::set_hdpath(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  hdpath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:EccGetExtendedPublicKeyRequest.hdPath)
+}
+inline void EccGetExtendedPublicKeyRequest::set_hdpath(const char* value, size_t size) {
+  
+  hdpath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:EccGetExtendedPublicKeyRequest.hdPath)
+}
+inline ::std::string* EccGetExtendedPublicKeyRequest::mutable_hdpath() {
+  
+  // @@protoc_insertion_point(field_mutable:EccGetExtendedPublicKeyRequest.hdPath)
+  return hdpath_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* EccGetExtendedPublicKeyRequest::release_hdpath() {
+  // @@protoc_insertion_point(field_release:EccGetExtendedPublicKeyRequest.hdPath)
+  
+  return hdpath_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void EccGetExtendedPublicKeyRequest::set_allocated_hdpath(::std::string* hdpath) {
+  if (hdpath != NULL) {
+    
+  } else {
+    
+  }
+  hdpath_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), hdpath);
+  // @@protoc_insertion_point(field_set_allocated:EccGetExtendedPublicKeyRequest.hdPath)
+}
+
+// .EccAlgorithm algorithm = 2;
+inline void EccGetExtendedPublicKeyRequest::clear_algorithm() {
+  algorithm_ = 0;
+}
+inline ::EccAlgorithm EccGetExtendedPublicKeyRequest::algorithm() const {
+  // @@protoc_insertion_point(field_get:EccGetExtendedPublicKeyRequest.algorithm)
+  return static_cast< ::EccAlgorithm >(algorithm_);
+}
+inline void EccGetExtendedPublicKeyRequest::set_algorithm(::EccAlgorithm value) {
+  
+  algorithm_ = value;
+  // @@protoc_insertion_point(field_set:EccGetExtendedPublicKeyRequest.algorithm)
+}
+
+// -------------------------------------------------------------------
+
+// EccGetExtendedPublicKeyReply
+
+// string hdPath = 1;
+inline void EccGetExtendedPublicKeyReply::clear_hdpath() {
+  hdpath_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& EccGetExtendedPublicKeyReply::hdpath() const {
+  // @@protoc_insertion_point(field_get:EccGetExtendedPublicKeyReply.hdPath)
+  return hdpath_.GetNoArena();
+}
+inline void EccGetExtendedPublicKeyReply::set_hdpath(const ::std::string& value) {
+  
+  hdpath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:EccGetExtendedPublicKeyReply.hdPath)
+}
+#if LANG_CXX11
+inline void EccGetExtendedPublicKeyReply::set_hdpath(::std::string&& value) {
+  
+  hdpath_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:EccGetExtendedPublicKeyReply.hdPath)
+}
+#endif
+inline void EccGetExtendedPublicKeyReply::set_hdpath(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  hdpath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:EccGetExtendedPublicKeyReply.hdPath)
+}
+inline void EccGetExtendedPublicKeyReply::set_hdpath(const char* value, size_t size) {
+  
+  hdpath_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:EccGetExtendedPublicKeyReply.hdPath)
+}
+inline ::std::string* EccGetExtendedPublicKeyReply::mutable_hdpath() {
+  
+  // @@protoc_insertion_point(field_mutable:EccGetExtendedPublicKeyReply.hdPath)
+  return hdpath_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* EccGetExtendedPublicKeyReply::release_hdpath() {
+  // @@protoc_insertion_point(field_release:EccGetExtendedPublicKeyReply.hdPath)
+  
+  return hdpath_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void EccGetExtendedPublicKeyReply::set_allocated_hdpath(::std::string* hdpath) {
+  if (hdpath != NULL) {
+    
+  } else {
+    
+  }
+  hdpath_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), hdpath);
+  // @@protoc_insertion_point(field_set_allocated:EccGetExtendedPublicKeyReply.hdPath)
+}
+
+// .EccAlgorithm algorithm = 2;
+inline void EccGetExtendedPublicKeyReply::clear_algorithm() {
+  algorithm_ = 0;
+}
+inline ::EccAlgorithm EccGetExtendedPublicKeyReply::algorithm() const {
+  // @@protoc_insertion_point(field_get:EccGetExtendedPublicKeyReply.algorithm)
+  return static_cast< ::EccAlgorithm >(algorithm_);
+}
+inline void EccGetExtendedPublicKeyReply::set_algorithm(::EccAlgorithm value) {
+  
+  algorithm_ = value;
+  // @@protoc_insertion_point(field_set:EccGetExtendedPublicKeyReply.algorithm)
+}
+
+// bytes pubkey = 3;
+inline void EccGetExtendedPublicKeyReply::clear_pubkey() {
+  pubkey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& EccGetExtendedPublicKeyReply::pubkey() const {
+  // @@protoc_insertion_point(field_get:EccGetExtendedPublicKeyReply.pubkey)
+  return pubkey_.GetNoArena();
+}
+inline void EccGetExtendedPublicKeyReply::set_pubkey(const ::std::string& value) {
+  
+  pubkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:EccGetExtendedPublicKeyReply.pubkey)
+}
+#if LANG_CXX11
+inline void EccGetExtendedPublicKeyReply::set_pubkey(::std::string&& value) {
+  
+  pubkey_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:EccGetExtendedPublicKeyReply.pubkey)
+}
+#endif
+inline void EccGetExtendedPublicKeyReply::set_pubkey(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  pubkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:EccGetExtendedPublicKeyReply.pubkey)
+}
+inline void EccGetExtendedPublicKeyReply::set_pubkey(const void* value, size_t size) {
+  
+  pubkey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:EccGetExtendedPublicKeyReply.pubkey)
+}
+inline ::std::string* EccGetExtendedPublicKeyReply::mutable_pubkey() {
+  
+  // @@protoc_insertion_point(field_mutable:EccGetExtendedPublicKeyReply.pubkey)
+  return pubkey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* EccGetExtendedPublicKeyReply::release_pubkey() {
+  // @@protoc_insertion_point(field_release:EccGetExtendedPublicKeyReply.pubkey)
+  
+  return pubkey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void EccGetExtendedPublicKeyReply::set_allocated_pubkey(::std::string* pubkey) {
+  if (pubkey != NULL) {
+    
+  } else {
+    
+  }
+  pubkey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), pubkey);
+  // @@protoc_insertion_point(field_set_allocated:EccGetExtendedPublicKeyReply.pubkey)
+}
+
+// bytes chainCode = 4;
+inline void EccGetExtendedPublicKeyReply::clear_chaincode() {
+  chaincode_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& EccGetExtendedPublicKeyReply::chaincode() const {
+  // @@protoc_insertion_point(field_get:EccGetExtendedPublicKeyReply.chainCode)
+  return chaincode_.GetNoArena();
+}
+inline void EccGetExtendedPublicKeyReply::set_chaincode(const ::std::string& value) {
+  
+  chaincode_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:EccGetExtendedPublicKeyReply.chainCode)
+}
+#if LANG_CXX11
+inline void EccGetExtendedPublicKeyReply::set_chaincode(::std::string&& value) {
+  
+  chaincode_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:EccGetExtendedPublicKeyReply.chainCode)
+}
+#endif
+inline void EccGetExtendedPublicKeyReply::set_chaincode(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  chaincode_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:EccGetExtendedPublicKeyReply.chainCode)
+}
+inline void EccGetExtendedPublicKeyReply::set_chaincode(const void* value, size_t size) {
+  
+  chaincode_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:EccGetExtendedPublicKeyReply.chainCode)
+}
+inline ::std::string* EccGetExtendedPublicKeyReply::mutable_chaincode() {
+  
+  // @@protoc_insertion_point(field_mutable:EccGetExtendedPublicKeyReply.chainCode)
+  return chaincode_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* EccGetExtendedPublicKeyReply::release_chaincode() {
+  // @@protoc_insertion_point(field_release:EccGetExtendedPublicKeyReply.chainCode)
+  
+  return chaincode_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void EccGetExtendedPublicKeyReply::set_allocated_chaincode(::std::string* chaincode) {
+  if (chaincode != NULL) {
+    
+  } else {
+    
+  }
+  chaincode_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), chaincode);
+  // @@protoc_insertion_point(field_set_allocated:EccGetExtendedPublicKeyReply.chainCode)
+}
+
+// -------------------------------------------------------------------
+
 // EccMultiplyRequest
 
 // string hdPath = 1;
@@ -4218,6 +4740,10 @@ inline void EccMultiplyReply::set_allocated_result(::std::string* result) {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

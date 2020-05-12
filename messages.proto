@@ -99,6 +99,18 @@ message EccGetPublicKeyReply {
     bytes pubkey = 3;
 }
 
+message EccGetExtendedPublicKeyRequest {
+    string hdPath = 1;
+    EccAlgorithm algorithm = 2;
+}
+
+message EccGetExtendedPublicKeyReply {
+    string hdPath = 1;
+    EccAlgorithm algorithm = 2;
+    bytes pubkey = 3;
+    bytes chainCode = 4;
+}
+
 message EccMultiplyRequest {
     string hdPath = 1;
     EccAlgorithm algorithm = 2;
