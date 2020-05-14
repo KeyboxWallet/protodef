@@ -687,12 +687,12 @@ void AddDescriptorsImpl() {
       "\0162\r.EccAlgorithm\022\024\n\014input_pubkey\030\003 \001(\014\022\022"
       "\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 \001(\014\"\022\n\020Er"
       "aseDataRequest*/\n\nDeviceMode\022\023\n\017MODE_BOO"
-      "TLOADER\020\000\022\014\n\010MODE_APP\020\001*1\n\tLockState\022\n\n\006"
-      "UNKOWN\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002*\035\n\014Ec"
-      "cAlgorithm\022\r\n\tSECP256K1\020\000b\006proto3"
+      "TLOADER\020\000\022\014\n\010MODE_APP\020\001*2\n\tLockState\022\013\n\007"
+      "UNKNOWN\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002*\035\n\014E"
+      "ccAlgorithm\022\r\n\tSECP256K1\020\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1673);
+      descriptor, 1674);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "messages.proto", &protobuf_RegisterTypes);
 }

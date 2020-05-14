@@ -153,14 +153,14 @@ inline bool DeviceMode_Parse(
     DeviceMode_descriptor(), name, value);
 }
 enum LockState {
-  UNKOWN = 0,
+  UNKNOWN = 0,
   UNLOCKED = 1,
   LOCKED = 2,
   LockState_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
   LockState_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
 bool LockState_IsValid(int value);
-const LockState LockState_MIN = UNKOWN;
+const LockState LockState_MIN = UNKNOWN;
 const LockState LockState_MAX = LOCKED;
 const int LockState_ARRAYSIZE = LockState_MAX + 1;
 

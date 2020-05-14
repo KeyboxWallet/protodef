@@ -164,14 +164,14 @@ inline bool DeviceMode_Parse(
     DeviceMode_descriptor(), name, value);
 }
 enum LockState : int {
-  UNKOWN = 0,
+  UNKNOWN = 0,
   UNLOCKED = 1,
   LOCKED = 2,
   LockState_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   LockState_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool LockState_IsValid(int value);
-constexpr LockState LockState_MIN = UNKOWN;
+constexpr LockState LockState_MIN = UNKNOWN;
 constexpr LockState LockState_MAX = LOCKED;
 constexpr int LockState_ARRAYSIZE = LockState_MAX + 1;
 
