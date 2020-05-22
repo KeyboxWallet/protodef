@@ -620,7 +620,8 @@ const char descriptor_table_protodef_messages_2eproto[] PROTOBUF_SECTION_VARIABL
   "aseDataRequest*/\n\nDeviceMode\022\023\n\017MODE_BOO"
   "TLOADER\020\000\022\014\n\010MODE_APP\020\001*2\n\tLockState\022\013\n\007"
   "UNKNOWN\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002*\035\n\014E"
-  "ccAlgorithm\022\r\n\tSECP256K1\020\000b\006proto3"
+  "ccAlgorithm\022\r\n\tSECP256K1\020\000B+\n\031com.keybox"
+  ".plugins.walletB\016KeyboxProtobufb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_messages_2eproto_deps[1] = {
 };
@@ -649,7 +650,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_mes
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_messages_2eproto_once;
 static bool descriptor_table_messages_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_messages_2eproto = {
-  &descriptor_table_messages_2eproto_initialized, descriptor_table_protodef_messages_2eproto, "messages.proto", 1674,
+  &descriptor_table_messages_2eproto_initialized, descriptor_table_protodef_messages_2eproto, "messages.proto", 1719,
   &descriptor_table_messages_2eproto_once, descriptor_table_messages_2eproto_sccs, descriptor_table_messages_2eproto_deps, 20, 0,
   schemas, file_default_instances, TableStruct_messages_2eproto::offsets,
   file_level_metadata_messages_2eproto, 20, file_level_enum_descriptors_messages_2eproto, file_level_service_descriptors_messages_2eproto,

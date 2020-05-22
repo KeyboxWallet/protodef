@@ -1,7 +1,8 @@
 syntax = "proto3";
 
 // 通用消息类型
-
+option java_package = "com.keybox.plugins.wallet";
+option java_outer_classname = "KeyboxProtobuf";
 
 message RequestRejected {
     uint32 requestId = 1;
