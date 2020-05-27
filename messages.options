@@ -9,3 +9,5 @@
 *.R      max_size:512
 *.S      max_size:512
 *.signature max_size:128
+*.psbt   max_size:8192
+*.bip32MasterKeyId max_size:32

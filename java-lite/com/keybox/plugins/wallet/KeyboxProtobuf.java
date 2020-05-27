@@ -7160,6 +7160,459 @@ public final class KeyboxProtobuf {
     }
   }
 
+  public interface GetWalletIdentifierRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetWalletIdentifierRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+  }
+  /**
+   * Protobuf type {@code GetWalletIdentifierRequest}
+   */
+  public  static final class GetWalletIdentifierRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetWalletIdentifierRequest, GetWalletIdentifierRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:GetWalletIdentifierRequest)
+      GetWalletIdentifierRequestOrBuilder {
+    private GetWalletIdentifierRequest() {
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code GetWalletIdentifierRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetWalletIdentifierRequest)
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequestOrBuilder {
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetWalletIdentifierRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = null;java.lang.String info =
+                "\u0000\u0000";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:GetWalletIdentifierRequest)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest DEFAULT_INSTANCE;
+    static {
+      GetWalletIdentifierRequest defaultInstance = new GetWalletIdentifierRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetWalletIdentifierRequest.class, defaultInstance);
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetWalletIdentifierRequest> PARSER;
+
+    public static com.google.protobuf.Parser<GetWalletIdentifierRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface GetWalletIdentifierReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetWalletIdentifierReply)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+     * </pre>
+     *
+     * <code>bytes bip32MasterKeyId = 1;</code>
+     * @return The bip32MasterKeyId.
+     */
+    com.google.protobuf.ByteString getBip32MasterKeyId();
+  }
+  /**
+   * Protobuf type {@code GetWalletIdentifierReply}
+   */
+  public  static final class GetWalletIdentifierReply extends
+      com.google.protobuf.GeneratedMessageLite<
+          GetWalletIdentifierReply, GetWalletIdentifierReply.Builder> implements
+      // @@protoc_insertion_point(message_implements:GetWalletIdentifierReply)
+      GetWalletIdentifierReplyOrBuilder {
+    private GetWalletIdentifierReply() {
+      bip32MasterKeyId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int BIP32MASTERKEYID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString bip32MasterKeyId_;
+    /**
+     * <pre>
+     * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+     * </pre>
+     *
+     * <code>bytes bip32MasterKeyId = 1;</code>
+     * @return The bip32MasterKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBip32MasterKeyId() {
+      return bip32MasterKeyId_;
+    }
+    /**
+     * <pre>
+     * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+     * </pre>
+     *
+     * <code>bytes bip32MasterKeyId = 1;</code>
+     * @param value The bip32MasterKeyId to set.
+     */
+    private void setBip32MasterKeyId(com.google.protobuf.ByteString value) {
+      value.getClass();
+  
+      bip32MasterKeyId_ = value;
+    }
+    /**
+     * <pre>
+     * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+     * </pre>
+     *
+     * <code>bytes bip32MasterKeyId = 1;</code>
+     */
+    private void clearBip32MasterKeyId() {
+      
+      bip32MasterKeyId_ = getDefaultInstance().getBip32MasterKeyId();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code GetWalletIdentifierReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply, Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetWalletIdentifierReply)
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReplyOrBuilder {
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+       * </pre>
+       *
+       * <code>bytes bip32MasterKeyId = 1;</code>
+       * @return The bip32MasterKeyId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBip32MasterKeyId() {
+        return instance.getBip32MasterKeyId();
+      }
+      /**
+       * <pre>
+       * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+       * </pre>
+       *
+       * <code>bytes bip32MasterKeyId = 1;</code>
+       * @param value The bip32MasterKeyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBip32MasterKeyId(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setBip32MasterKeyId(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+       * </pre>
+       *
+       * <code>bytes bip32MasterKeyId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBip32MasterKeyId() {
+        copyOnWrite();
+        instance.clearBip32MasterKeyId();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:GetWalletIdentifierReply)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "bip32MasterKeyId_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:GetWalletIdentifierReply)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply DEFAULT_INSTANCE;
+    static {
+      GetWalletIdentifierReply defaultInstance = new GetWalletIdentifierReply();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        GetWalletIdentifierReply.class, defaultInstance);
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<GetWalletIdentifierReply> PARSER;
+
+    public static com.google.protobuf.Parser<GetWalletIdentifierReply> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
   public interface EccMultiplyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:EccMultiplyRequest)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -8374,6 +8827,614 @@ public final class KeyboxProtobuf {
     private static volatile com.google.protobuf.Parser<EraseDataRequest> PARSER;
 
     public static com.google.protobuf.Parser<EraseDataRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface BitcoinSignRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BitcoinSignRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>bool testnet = 1;</code>
+     * @return The testnet.
+     */
+    boolean getTestnet();
+
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, input updated if needed.
+     * </pre>
+     *
+     * <code>bytes psbt = 2;</code>
+     * @return The psbt.
+     */
+    com.google.protobuf.ByteString getPsbt();
+  }
+  /**
+   * Protobuf type {@code BitcoinSignRequest}
+   */
+  public  static final class BitcoinSignRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          BitcoinSignRequest, BitcoinSignRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:BitcoinSignRequest)
+      BitcoinSignRequestOrBuilder {
+    private BitcoinSignRequest() {
+      psbt_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int TESTNET_FIELD_NUMBER = 1;
+    private boolean testnet_;
+    /**
+     * <code>bool testnet = 1;</code>
+     * @return The testnet.
+     */
+    @java.lang.Override
+    public boolean getTestnet() {
+      return testnet_;
+    }
+    /**
+     * <code>bool testnet = 1;</code>
+     * @param value The testnet to set.
+     */
+    private void setTestnet(boolean value) {
+      
+      testnet_ = value;
+    }
+    /**
+     * <code>bool testnet = 1;</code>
+     */
+    private void clearTestnet() {
+      
+      testnet_ = false;
+    }
+
+    public static final int PSBT_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString psbt_;
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, input updated if needed.
+     * </pre>
+     *
+     * <code>bytes psbt = 2;</code>
+     * @return The psbt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPsbt() {
+      return psbt_;
+    }
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, input updated if needed.
+     * </pre>
+     *
+     * <code>bytes psbt = 2;</code>
+     * @param value The psbt to set.
+     */
+    private void setPsbt(com.google.protobuf.ByteString value) {
+      value.getClass();
+  
+      psbt_ = value;
+    }
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, input updated if needed.
+     * </pre>
+     *
+     * <code>bytes psbt = 2;</code>
+     */
+    private void clearPsbt() {
+      
+      psbt_ = getDefaultInstance().getPsbt();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code BitcoinSignRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:BitcoinSignRequest)
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequestOrBuilder {
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>bool testnet = 1;</code>
+       * @return The testnet.
+       */
+      @java.lang.Override
+      public boolean getTestnet() {
+        return instance.getTestnet();
+      }
+      /**
+       * <code>bool testnet = 1;</code>
+       * @param value The testnet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestnet(boolean value) {
+        copyOnWrite();
+        instance.setTestnet(value);
+        return this;
+      }
+      /**
+       * <code>bool testnet = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestnet() {
+        copyOnWrite();
+        instance.clearTestnet();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, input updated if needed.
+       * </pre>
+       *
+       * <code>bytes psbt = 2;</code>
+       * @return The psbt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPsbt() {
+        return instance.getPsbt();
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, input updated if needed.
+       * </pre>
+       *
+       * <code>bytes psbt = 2;</code>
+       * @param value The psbt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPsbt(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPsbt(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, input updated if needed.
+       * </pre>
+       *
+       * <code>bytes psbt = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPsbt() {
+        copyOnWrite();
+        instance.clearPsbt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:BitcoinSignRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "testnet_",
+              "psbt_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\n" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:BitcoinSignRequest)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest DEFAULT_INSTANCE;
+    static {
+      BitcoinSignRequest defaultInstance = new BitcoinSignRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        BitcoinSignRequest.class, defaultInstance);
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<BitcoinSignRequest> PARSER;
+
+    public static com.google.protobuf.Parser<BitcoinSignRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface BitcoinSignResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BitcoinSignResult)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, some inputs signed.
+     * </pre>
+     *
+     * <code>bytes psbt = 1;</code>
+     * @return The psbt.
+     */
+    com.google.protobuf.ByteString getPsbt();
+  }
+  /**
+   * Protobuf type {@code BitcoinSignResult}
+   */
+  public  static final class BitcoinSignResult extends
+      com.google.protobuf.GeneratedMessageLite<
+          BitcoinSignResult, BitcoinSignResult.Builder> implements
+      // @@protoc_insertion_point(message_implements:BitcoinSignResult)
+      BitcoinSignResultOrBuilder {
+    private BitcoinSignResult() {
+      psbt_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int PSBT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString psbt_;
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, some inputs signed.
+     * </pre>
+     *
+     * <code>bytes psbt = 1;</code>
+     * @return The psbt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPsbt() {
+      return psbt_;
+    }
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, some inputs signed.
+     * </pre>
+     *
+     * <code>bytes psbt = 1;</code>
+     * @param value The psbt to set.
+     */
+    private void setPsbt(com.google.protobuf.ByteString value) {
+      value.getClass();
+  
+      psbt_ = value;
+    }
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, some inputs signed.
+     * </pre>
+     *
+     * <code>bytes psbt = 1;</code>
+     */
+    private void clearPsbt() {
+      
+      psbt_ = getDefaultInstance().getPsbt();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code BitcoinSignResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult, Builder> implements
+        // @@protoc_insertion_point(builder_implements:BitcoinSignResult)
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResultOrBuilder {
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, some inputs signed.
+       * </pre>
+       *
+       * <code>bytes psbt = 1;</code>
+       * @return The psbt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPsbt() {
+        return instance.getPsbt();
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, some inputs signed.
+       * </pre>
+       *
+       * <code>bytes psbt = 1;</code>
+       * @param value The psbt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPsbt(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setPsbt(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, some inputs signed.
+       * </pre>
+       *
+       * <code>bytes psbt = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPsbt() {
+        copyOnWrite();
+        instance.clearPsbt();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:BitcoinSignResult)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "psbt_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:BitcoinSignResult)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult DEFAULT_INSTANCE;
+    static {
+      BitcoinSignResult defaultInstance = new BitcoinSignResult();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        BitcoinSignResult.class, defaultInstance);
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<BitcoinSignResult> PARSER;
+
+    public static com.google.protobuf.Parser<BitcoinSignResult> parser() {
       return DEFAULT_INSTANCE.getParserForType();
     }
   }

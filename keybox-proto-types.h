@@ -23,6 +23,10 @@
 #define MsgTypeEccGetPublicKeyReply 18
 #define MsgTypeEccMultiplyRequest 19
 #define MsgTypeEccMultiplyReply 20
-#define MsgTypeHighLimit 21
+#define MsgTypeBitcoinSignRequest 21
+#define MsgTypeEthereumSignRequest 22
+#define MsgTypeGetWalletIdentifierRequest 23
+#define MsgTypeGetWalletIdentifierReply 24
+#define MsgTypeHighLimit 25
 
 #endif

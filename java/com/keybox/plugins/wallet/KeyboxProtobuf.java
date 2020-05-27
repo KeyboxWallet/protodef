@@ -49,6 +49,8 @@ public final class KeyboxProtobuf {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -56,6 +58,10 @@ public final class KeyboxProtobuf {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static DeviceMode forNumber(int value) {
       switch (value) {
         case 0: return MODE_BOOTLOADER;
@@ -78,6 +84,10 @@ public final class KeyboxProtobuf {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -155,6 +165,8 @@ public final class KeyboxProtobuf {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -162,6 +174,10 @@ public final class KeyboxProtobuf {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static LockState forNumber(int value) {
       switch (value) {
         case 0: return UNKNOWN;
@@ -185,6 +201,10 @@ public final class KeyboxProtobuf {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -246,6 +266,8 @@ public final class KeyboxProtobuf {
     }
 
     /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
@@ -253,6 +275,10 @@ public final class KeyboxProtobuf {
       return forNumber(value);
     }
 
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
     public static EccAlgorithm forNumber(int value) {
       switch (value) {
         case 0: return SECP256K1;
@@ -274,6 +300,10 @@ public final class KeyboxProtobuf {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -314,20 +344,24 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>uint32 requestId = 1;</code>
+     * @return The requestId.
      */
     int getRequestId();
 
     /**
      * <code>int32 errCode = 2;</code>
+     * @return The errCode.
      */
     int getErrCode();
 
     /**
      * <code>string errMessage = 3;</code>
+     * @return The errMessage.
      */
     java.lang.String getErrMessage();
     /**
      * <code>string errMessage = 3;</code>
+     * @return The bytes for errMessage.
      */
     com.google.protobuf.ByteString
         getErrMessageBytes();
@@ -335,7 +369,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code RequestRejected}
    */
-  public  static final class RequestRejected extends
+  public static final class RequestRejected extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:RequestRejected)
       RequestRejectedOrBuilder {
@@ -430,7 +464,9 @@ public final class KeyboxProtobuf {
     private int requestId_;
     /**
      * <code>uint32 requestId = 1;</code>
+     * @return The requestId.
      */
+    @java.lang.Override
     public int getRequestId() {
       return requestId_;
     }
@@ -439,7 +475,9 @@ public final class KeyboxProtobuf {
     private int errCode_;
     /**
      * <code>int32 errCode = 2;</code>
+     * @return The errCode.
      */
+    @java.lang.Override
     public int getErrCode() {
       return errCode_;
     }
@@ -448,7 +486,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object errMessage_;
     /**
      * <code>string errMessage = 3;</code>
+     * @return The errMessage.
      */
+    @java.lang.Override
     public java.lang.String getErrMessage() {
       java.lang.Object ref = errMessage_;
       if (ref instanceof java.lang.String) {
@@ -463,7 +503,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string errMessage = 3;</code>
+     * @return The bytes for errMessage.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getErrMessageBytes() {
       java.lang.Object ref = errMessage_;
@@ -817,12 +859,16 @@ public final class KeyboxProtobuf {
       private int requestId_ ;
       /**
        * <code>uint32 requestId = 1;</code>
+       * @return The requestId.
        */
+      @java.lang.Override
       public int getRequestId() {
         return requestId_;
       }
       /**
        * <code>uint32 requestId = 1;</code>
+       * @param value The requestId to set.
+       * @return This builder for chaining.
        */
       public Builder setRequestId(int value) {
         
@@ -832,6 +878,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>uint32 requestId = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRequestId() {
         
@@ -843,12 +890,16 @@ public final class KeyboxProtobuf {
       private int errCode_ ;
       /**
        * <code>int32 errCode = 2;</code>
+       * @return The errCode.
        */
+      @java.lang.Override
       public int getErrCode() {
         return errCode_;
       }
       /**
        * <code>int32 errCode = 2;</code>
+       * @param value The errCode to set.
+       * @return This builder for chaining.
        */
       public Builder setErrCode(int value) {
         
@@ -858,6 +909,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>int32 errCode = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearErrCode() {
         
@@ -869,6 +921,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object errMessage_ = "";
       /**
        * <code>string errMessage = 3;</code>
+       * @return The errMessage.
        */
       public java.lang.String getErrMessage() {
         java.lang.Object ref = errMessage_;
@@ -884,6 +937,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string errMessage = 3;</code>
+       * @return The bytes for errMessage.
        */
       public com.google.protobuf.ByteString
           getErrMessageBytes() {
@@ -900,6 +954,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string errMessage = 3;</code>
+       * @param value The errMessage to set.
+       * @return This builder for chaining.
        */
       public Builder setErrMessage(
           java.lang.String value) {
@@ -913,6 +969,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string errMessage = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearErrMessage() {
         
@@ -922,6 +979,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string errMessage = 3;</code>
+       * @param value The bytes for errMessage to set.
+       * @return This builder for chaining.
        */
       public Builder setErrMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -998,7 +1057,7 @@ public final class KeyboxProtobuf {
    *
    * Protobuf type {@code GenericConfirmReply}
    */
-  public  static final class GenericConfirmReply extends
+  public static final class GenericConfirmReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:GenericConfirmReply)
       GenericConfirmReplyOrBuilder {
@@ -1420,7 +1479,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code GetModeAndVersionRequest}
    */
-  public  static final class GetModeAndVersionRequest extends
+  public static final class GetModeAndVersionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:GetModeAndVersionRequest)
       GetModeAndVersionRequestOrBuilder {
@@ -1841,6 +1900,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.DeviceMode mode = 1;</code>
+     * @return The enum numeric value on the wire for mode.
      */
     int getModeValue();
     /**
@@ -1849,25 +1909,30 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.DeviceMode mode = 1;</code>
+     * @return The mode.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode getMode();
 
     /**
      * <code>string firmwareVersion = 2;</code>
+     * @return The firmwareVersion.
      */
     java.lang.String getFirmwareVersion();
     /**
      * <code>string firmwareVersion = 2;</code>
+     * @return The bytes for firmwareVersion.
      */
     com.google.protobuf.ByteString
         getFirmwareVersionBytes();
 
     /**
      * <code>string deviceSerialNo = 3;</code>
+     * @return The deviceSerialNo.
      */
     java.lang.String getDeviceSerialNo();
     /**
      * <code>string deviceSerialNo = 3;</code>
+     * @return The bytes for deviceSerialNo.
      */
     com.google.protobuf.ByteString
         getDeviceSerialNoBytes();
@@ -1878,6 +1943,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.LockState isLocked = 4;</code>
+     * @return The enum numeric value on the wire for isLocked.
      */
     int getIsLockedValue();
     /**
@@ -1886,13 +1952,14 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.LockState isLocked = 4;</code>
+     * @return The isLocked.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.LockState getIsLocked();
   }
   /**
    * Protobuf type {@code GetModeAndVersionReply}
    */
-  public  static final class GetModeAndVersionReply extends
+  public static final class GetModeAndVersionReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:GetModeAndVersionReply)
       GetModeAndVersionReplyOrBuilder {
@@ -2002,8 +2069,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.DeviceMode mode = 1;</code>
+     * @return The enum numeric value on the wire for mode.
      */
-    public int getModeValue() {
+    @java.lang.Override public int getModeValue() {
       return mode_;
     }
     /**
@@ -2012,8 +2080,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.DeviceMode mode = 1;</code>
+     * @return The mode.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode getMode() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode getMode() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode result = com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode.valueOf(mode_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode.UNRECOGNIZED : result;
@@ -2023,7 +2092,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object firmwareVersion_;
     /**
      * <code>string firmwareVersion = 2;</code>
+     * @return The firmwareVersion.
      */
+    @java.lang.Override
     public java.lang.String getFirmwareVersion() {
       java.lang.Object ref = firmwareVersion_;
       if (ref instanceof java.lang.String) {
@@ -2038,7 +2109,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string firmwareVersion = 2;</code>
+     * @return The bytes for firmwareVersion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFirmwareVersionBytes() {
       java.lang.Object ref = firmwareVersion_;
@@ -2057,7 +2130,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object deviceSerialNo_;
     /**
      * <code>string deviceSerialNo = 3;</code>
+     * @return The deviceSerialNo.
      */
+    @java.lang.Override
     public java.lang.String getDeviceSerialNo() {
       java.lang.Object ref = deviceSerialNo_;
       if (ref instanceof java.lang.String) {
@@ -2072,7 +2147,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string deviceSerialNo = 3;</code>
+     * @return The bytes for deviceSerialNo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceSerialNoBytes() {
       java.lang.Object ref = deviceSerialNo_;
@@ -2095,8 +2172,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.LockState isLocked = 4;</code>
+     * @return The enum numeric value on the wire for isLocked.
      */
-    public int getIsLockedValue() {
+    @java.lang.Override public int getIsLockedValue() {
       return isLocked_;
     }
     /**
@@ -2105,8 +2183,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>.LockState isLocked = 4;</code>
+     * @return The isLocked.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.LockState getIsLocked() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.LockState getIsLocked() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.LockState result = com.keybox.plugins.wallet.KeyboxProtobuf.LockState.valueOf(isLocked_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.LockState.UNRECOGNIZED : result;
@@ -2470,8 +2549,9 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.DeviceMode mode = 1;</code>
+       * @return The enum numeric value on the wire for mode.
        */
-      public int getModeValue() {
+      @java.lang.Override public int getModeValue() {
         return mode_;
       }
       /**
@@ -2480,8 +2560,11 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.DeviceMode mode = 1;</code>
+       * @param value The enum numeric value on the wire for mode to set.
+       * @return This builder for chaining.
        */
       public Builder setModeValue(int value) {
+        
         mode_ = value;
         onChanged();
         return this;
@@ -2492,7 +2575,9 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.DeviceMode mode = 1;</code>
+       * @return The mode.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode getMode() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode result = com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode.valueOf(mode_);
@@ -2504,6 +2589,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.DeviceMode mode = 1;</code>
+       * @param value The mode to set.
+       * @return This builder for chaining.
        */
       public Builder setMode(com.keybox.plugins.wallet.KeyboxProtobuf.DeviceMode value) {
         if (value == null) {
@@ -2520,6 +2607,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.DeviceMode mode = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMode() {
         
@@ -2531,6 +2619,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object firmwareVersion_ = "";
       /**
        * <code>string firmwareVersion = 2;</code>
+       * @return The firmwareVersion.
        */
       public java.lang.String getFirmwareVersion() {
         java.lang.Object ref = firmwareVersion_;
@@ -2546,6 +2635,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 2;</code>
+       * @return The bytes for firmwareVersion.
        */
       public com.google.protobuf.ByteString
           getFirmwareVersionBytes() {
@@ -2562,6 +2652,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 2;</code>
+       * @param value The firmwareVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmwareVersion(
           java.lang.String value) {
@@ -2575,6 +2667,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFirmwareVersion() {
         
@@ -2584,6 +2677,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 2;</code>
+       * @param value The bytes for firmwareVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmwareVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -2600,6 +2695,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object deviceSerialNo_ = "";
       /**
        * <code>string deviceSerialNo = 3;</code>
+       * @return The deviceSerialNo.
        */
       public java.lang.String getDeviceSerialNo() {
         java.lang.Object ref = deviceSerialNo_;
@@ -2615,6 +2711,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 3;</code>
+       * @return The bytes for deviceSerialNo.
        */
       public com.google.protobuf.ByteString
           getDeviceSerialNoBytes() {
@@ -2631,6 +2728,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 3;</code>
+       * @param value The deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNo(
           java.lang.String value) {
@@ -2644,6 +2743,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceSerialNo() {
         
@@ -2653,6 +2753,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 3;</code>
+       * @param value The bytes for deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNoBytes(
           com.google.protobuf.ByteString value) {
@@ -2673,8 +2775,9 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.LockState isLocked = 4;</code>
+       * @return The enum numeric value on the wire for isLocked.
        */
-      public int getIsLockedValue() {
+      @java.lang.Override public int getIsLockedValue() {
         return isLocked_;
       }
       /**
@@ -2683,8 +2786,11 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.LockState isLocked = 4;</code>
+       * @param value The enum numeric value on the wire for isLocked to set.
+       * @return This builder for chaining.
        */
       public Builder setIsLockedValue(int value) {
+        
         isLocked_ = value;
         onChanged();
         return this;
@@ -2695,7 +2801,9 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.LockState isLocked = 4;</code>
+       * @return The isLocked.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.LockState getIsLocked() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.LockState result = com.keybox.plugins.wallet.KeyboxProtobuf.LockState.valueOf(isLocked_);
@@ -2707,6 +2815,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.LockState isLocked = 4;</code>
+       * @param value The isLocked to set.
+       * @return This builder for chaining.
        */
       public Builder setIsLocked(com.keybox.plugins.wallet.KeyboxProtobuf.LockState value) {
         if (value == null) {
@@ -2723,6 +2833,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>.LockState isLocked = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIsLocked() {
         
@@ -2789,23 +2900,26 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The firmwareVersion.
      */
     java.lang.String getFirmwareVersion();
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The bytes for firmwareVersion.
      */
     com.google.protobuf.ByteString
         getFirmwareVersionBytes();
 
     /**
      * <code>bytes sha256hash = 2;</code>
+     * @return The sha256hash.
      */
     com.google.protobuf.ByteString getSha256Hash();
   }
   /**
    * Protobuf type {@code UpgradeStartRequest}
    */
-  public  static final class UpgradeStartRequest extends
+  public static final class UpgradeStartRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:UpgradeStartRequest)
       UpgradeStartRequestOrBuilder {
@@ -2896,7 +3010,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object firmwareVersion_;
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The firmwareVersion.
      */
+    @java.lang.Override
     public java.lang.String getFirmwareVersion() {
       java.lang.Object ref = firmwareVersion_;
       if (ref instanceof java.lang.String) {
@@ -2911,7 +3027,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The bytes for firmwareVersion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFirmwareVersionBytes() {
       java.lang.Object ref = firmwareVersion_;
@@ -2930,7 +3048,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString sha256Hash_;
     /**
      * <code>bytes sha256hash = 2;</code>
+     * @return The sha256hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSha256Hash() {
       return sha256Hash_;
     }
@@ -3257,6 +3377,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object firmwareVersion_ = "";
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @return The firmwareVersion.
        */
       public java.lang.String getFirmwareVersion() {
         java.lang.Object ref = firmwareVersion_;
@@ -3272,6 +3393,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @return The bytes for firmwareVersion.
        */
       public com.google.protobuf.ByteString
           getFirmwareVersionBytes() {
@@ -3288,6 +3410,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @param value The firmwareVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmwareVersion(
           java.lang.String value) {
@@ -3301,6 +3425,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFirmwareVersion() {
         
@@ -3310,6 +3435,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @param value The bytes for firmwareVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmwareVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -3326,12 +3453,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString sha256Hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes sha256hash = 2;</code>
+       * @return The sha256hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSha256Hash() {
         return sha256Hash_;
       }
       /**
        * <code>bytes sha256hash = 2;</code>
+       * @param value The sha256hash to set.
+       * @return This builder for chaining.
        */
       public Builder setSha256Hash(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -3344,6 +3475,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes sha256hash = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSha256Hash() {
         
@@ -3410,33 +3542,38 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The firmwareVersion.
      */
     java.lang.String getFirmwareVersion();
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The bytes for firmwareVersion.
      */
     com.google.protobuf.ByteString
         getFirmwareVersionBytes();
 
     /**
      * <code>bytes sha256hash = 2;</code>
+     * @return The sha256hash.
      */
     com.google.protobuf.ByteString getSha256Hash();
 
     /**
      * <code>bytes signature = 3;</code>
+     * @return The signature.
      */
     com.google.protobuf.ByteString getSignature();
 
     /**
      * <code>bytes firmware = 4;</code>
+     * @return The firmware.
      */
     com.google.protobuf.ByteString getFirmware();
   }
   /**
    * Protobuf type {@code SendUpgradeFirmware}
    */
-  public  static final class SendUpgradeFirmware extends
+  public static final class SendUpgradeFirmware extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:SendUpgradeFirmware)
       SendUpgradeFirmwareOrBuilder {
@@ -3539,7 +3676,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object firmwareVersion_;
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The firmwareVersion.
      */
+    @java.lang.Override
     public java.lang.String getFirmwareVersion() {
       java.lang.Object ref = firmwareVersion_;
       if (ref instanceof java.lang.String) {
@@ -3554,7 +3693,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string firmwareVersion = 1;</code>
+     * @return The bytes for firmwareVersion.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFirmwareVersionBytes() {
       java.lang.Object ref = firmwareVersion_;
@@ -3573,7 +3714,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString sha256Hash_;
     /**
      * <code>bytes sha256hash = 2;</code>
+     * @return The sha256hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSha256Hash() {
       return sha256Hash_;
     }
@@ -3582,7 +3725,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString signature_;
     /**
      * <code>bytes signature = 3;</code>
+     * @return The signature.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getSignature() {
       return signature_;
     }
@@ -3591,7 +3736,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString firmware_;
     /**
      * <code>bytes firmware = 4;</code>
+     * @return The firmware.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getFirmware() {
       return firmware_;
     }
@@ -3952,6 +4099,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object firmwareVersion_ = "";
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @return The firmwareVersion.
        */
       public java.lang.String getFirmwareVersion() {
         java.lang.Object ref = firmwareVersion_;
@@ -3967,6 +4115,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @return The bytes for firmwareVersion.
        */
       public com.google.protobuf.ByteString
           getFirmwareVersionBytes() {
@@ -3983,6 +4132,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @param value The firmwareVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmwareVersion(
           java.lang.String value) {
@@ -3996,6 +4147,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFirmwareVersion() {
         
@@ -4005,6 +4157,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string firmwareVersion = 1;</code>
+       * @param value The bytes for firmwareVersion to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmwareVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -4021,12 +4175,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString sha256Hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes sha256hash = 2;</code>
+       * @return The sha256hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSha256Hash() {
         return sha256Hash_;
       }
       /**
        * <code>bytes sha256hash = 2;</code>
+       * @param value The sha256hash to set.
+       * @return This builder for chaining.
        */
       public Builder setSha256Hash(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -4039,6 +4197,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes sha256hash = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSha256Hash() {
         
@@ -4050,12 +4209,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes signature = 3;</code>
+       * @return The signature.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getSignature() {
         return signature_;
       }
       /**
        * <code>bytes signature = 3;</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
        */
       public Builder setSignature(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -4068,6 +4231,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes signature = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSignature() {
         
@@ -4079,12 +4243,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString firmware_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes firmware = 4;</code>
+       * @return The firmware.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getFirmware() {
         return firmware_;
       }
       /**
        * <code>bytes firmware = 4;</code>
+       * @param value The firmware to set.
+       * @return This builder for chaining.
        */
       public Builder setFirmware(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -4097,6 +4265,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes firmware = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFirmware() {
         
@@ -4163,10 +4332,12 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string deviceSerialNo = 1;</code>
+     * @return The deviceSerialNo.
      */
     java.lang.String getDeviceSerialNo();
     /**
      * <code>string deviceSerialNo = 1;</code>
+     * @return The bytes for deviceSerialNo.
      */
     com.google.protobuf.ByteString
         getDeviceSerialNoBytes();
@@ -4174,7 +4345,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code WriteSerialNo}
    */
-  public  static final class WriteSerialNo extends
+  public static final class WriteSerialNo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:WriteSerialNo)
       WriteSerialNoOrBuilder {
@@ -4259,7 +4430,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object deviceSerialNo_;
     /**
      * <code>string deviceSerialNo = 1;</code>
+     * @return The deviceSerialNo.
      */
+    @java.lang.Override
     public java.lang.String getDeviceSerialNo() {
       java.lang.Object ref = deviceSerialNo_;
       if (ref instanceof java.lang.String) {
@@ -4274,7 +4447,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string deviceSerialNo = 1;</code>
+     * @return The bytes for deviceSerialNo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceSerialNoBytes() {
       java.lang.Object ref = deviceSerialNo_;
@@ -4594,6 +4769,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object deviceSerialNo_ = "";
       /**
        * <code>string deviceSerialNo = 1;</code>
+       * @return The deviceSerialNo.
        */
       public java.lang.String getDeviceSerialNo() {
         java.lang.Object ref = deviceSerialNo_;
@@ -4609,6 +4785,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 1;</code>
+       * @return The bytes for deviceSerialNo.
        */
       public com.google.protobuf.ByteString
           getDeviceSerialNoBytes() {
@@ -4625,6 +4802,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 1;</code>
+       * @param value The deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNo(
           java.lang.String value) {
@@ -4638,6 +4817,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceSerialNo() {
         
@@ -4647,6 +4827,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string deviceSerialNo = 1;</code>
+       * @param value The bytes for deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNoBytes(
           com.google.protobuf.ByteString value) {
@@ -4722,6 +4904,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>bool writeSuccess = 1;</code>
+     * @return The writeSuccess.
      */
     boolean getWriteSuccess();
 
@@ -4731,6 +4914,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The deviceSerialNo.
      */
     java.lang.String getDeviceSerialNo();
     /**
@@ -4739,6 +4923,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The bytes for deviceSerialNo.
      */
     com.google.protobuf.ByteString
         getDeviceSerialNoBytes();
@@ -4746,7 +4931,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code WriteSerialNoReply}
    */
-  public  static final class WriteSerialNoReply extends
+  public static final class WriteSerialNoReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:WriteSerialNoReply)
       WriteSerialNoReplyOrBuilder {
@@ -4840,7 +5025,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>bool writeSuccess = 1;</code>
+     * @return The writeSuccess.
      */
+    @java.lang.Override
     public boolean getWriteSuccess() {
       return writeSuccess_;
     }
@@ -4853,7 +5040,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The deviceSerialNo.
      */
+    @java.lang.Override
     public java.lang.String getDeviceSerialNo() {
       java.lang.Object ref = deviceSerialNo_;
       if (ref instanceof java.lang.String) {
@@ -4872,7 +5061,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The bytes for deviceSerialNo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceSerialNoBytes() {
       java.lang.Object ref = deviceSerialNo_;
@@ -5214,7 +5405,9 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>bool writeSuccess = 1;</code>
+       * @return The writeSuccess.
        */
+      @java.lang.Override
       public boolean getWriteSuccess() {
         return writeSuccess_;
       }
@@ -5224,6 +5417,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>bool writeSuccess = 1;</code>
+       * @param value The writeSuccess to set.
+       * @return This builder for chaining.
        */
       public Builder setWriteSuccess(boolean value) {
         
@@ -5237,6 +5432,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>bool writeSuccess = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearWriteSuccess() {
         
@@ -5252,6 +5448,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @return The deviceSerialNo.
        */
       public java.lang.String getDeviceSerialNo() {
         java.lang.Object ref = deviceSerialNo_;
@@ -5271,6 +5468,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @return The bytes for deviceSerialNo.
        */
       public com.google.protobuf.ByteString
           getDeviceSerialNoBytes() {
@@ -5291,6 +5489,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @param value The deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNo(
           java.lang.String value) {
@@ -5308,6 +5508,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceSerialNo() {
         
@@ -5321,6 +5522,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @param value The bytes for deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNoBytes(
           com.google.protobuf.ByteString value) {
@@ -5393,7 +5596,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code LockSerialNo}
    */
-  public  static final class LockSerialNo extends
+  public static final class LockSerialNo extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:LockSerialNo)
       LockSerialNoOrBuilder {
@@ -5814,6 +6017,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>bool lockSuccess = 1;</code>
+     * @return The lockSuccess.
      */
     boolean getLockSuccess();
 
@@ -5823,6 +6027,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The deviceSerialNo.
      */
     java.lang.String getDeviceSerialNo();
     /**
@@ -5831,6 +6036,7 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The bytes for deviceSerialNo.
      */
     com.google.protobuf.ByteString
         getDeviceSerialNoBytes();
@@ -5838,7 +6044,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code lockSerialNoReply}
    */
-  public  static final class lockSerialNoReply extends
+  public static final class lockSerialNoReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:lockSerialNoReply)
       lockSerialNoReplyOrBuilder {
@@ -5932,7 +6138,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>bool lockSuccess = 1;</code>
+     * @return The lockSuccess.
      */
+    @java.lang.Override
     public boolean getLockSuccess() {
       return lockSuccess_;
     }
@@ -5945,7 +6153,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The deviceSerialNo.
      */
+    @java.lang.Override
     public java.lang.String getDeviceSerialNo() {
       java.lang.Object ref = deviceSerialNo_;
       if (ref instanceof java.lang.String) {
@@ -5964,7 +6174,9 @@ public final class KeyboxProtobuf {
      * </pre>
      *
      * <code>string deviceSerialNo = 2;</code>
+     * @return The bytes for deviceSerialNo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDeviceSerialNoBytes() {
       java.lang.Object ref = deviceSerialNo_;
@@ -6306,7 +6518,9 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>bool lockSuccess = 1;</code>
+       * @return The lockSuccess.
        */
+      @java.lang.Override
       public boolean getLockSuccess() {
         return lockSuccess_;
       }
@@ -6316,6 +6530,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>bool lockSuccess = 1;</code>
+       * @param value The lockSuccess to set.
+       * @return This builder for chaining.
        */
       public Builder setLockSuccess(boolean value) {
         
@@ -6329,6 +6545,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>bool lockSuccess = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLockSuccess() {
         
@@ -6344,6 +6561,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @return The deviceSerialNo.
        */
       public java.lang.String getDeviceSerialNo() {
         java.lang.Object ref = deviceSerialNo_;
@@ -6363,6 +6581,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @return The bytes for deviceSerialNo.
        */
       public com.google.protobuf.ByteString
           getDeviceSerialNoBytes() {
@@ -6383,6 +6602,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @param value The deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNo(
           java.lang.String value) {
@@ -6400,6 +6621,7 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDeviceSerialNo() {
         
@@ -6413,6 +6635,8 @@ public final class KeyboxProtobuf {
        * </pre>
        *
        * <code>string deviceSerialNo = 2;</code>
+       * @param value The bytes for deviceSerialNo to set.
+       * @return This builder for chaining.
        */
       public Builder setDeviceSerialNoBytes(
           com.google.protobuf.ByteString value) {
@@ -6484,18 +6708,20 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>bool rfc6979 = 1;</code>
+     * @return The rfc6979.
      */
     boolean getRfc6979();
 
     /**
      * <code>bool graphene_canonize = 2;</code>
+     * @return The grapheneCanonize.
      */
     boolean getGrapheneCanonize();
   }
   /**
    * Protobuf type {@code EccSignOptions}
    */
-  public  static final class EccSignOptions extends
+  public static final class EccSignOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccSignOptions)
       EccSignOptionsOrBuilder {
@@ -6583,7 +6809,9 @@ public final class KeyboxProtobuf {
     private boolean rfc6979_;
     /**
      * <code>bool rfc6979 = 1;</code>
+     * @return The rfc6979.
      */
+    @java.lang.Override
     public boolean getRfc6979() {
       return rfc6979_;
     }
@@ -6592,7 +6820,9 @@ public final class KeyboxProtobuf {
     private boolean grapheneCanonize_;
     /**
      * <code>bool graphene_canonize = 2;</code>
+     * @return The grapheneCanonize.
      */
+    @java.lang.Override
     public boolean getGrapheneCanonize() {
       return grapheneCanonize_;
     }
@@ -6921,12 +7151,16 @@ public final class KeyboxProtobuf {
       private boolean rfc6979_ ;
       /**
        * <code>bool rfc6979 = 1;</code>
+       * @return The rfc6979.
        */
+      @java.lang.Override
       public boolean getRfc6979() {
         return rfc6979_;
       }
       /**
        * <code>bool rfc6979 = 1;</code>
+       * @param value The rfc6979 to set.
+       * @return This builder for chaining.
        */
       public Builder setRfc6979(boolean value) {
         
@@ -6936,6 +7170,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bool rfc6979 = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRfc6979() {
         
@@ -6947,12 +7182,16 @@ public final class KeyboxProtobuf {
       private boolean grapheneCanonize_ ;
       /**
        * <code>bool graphene_canonize = 2;</code>
+       * @return The grapheneCanonize.
        */
+      @java.lang.Override
       public boolean getGrapheneCanonize() {
         return grapheneCanonize_;
       }
       /**
        * <code>bool graphene_canonize = 2;</code>
+       * @param value The grapheneCanonize to set.
+       * @return This builder for chaining.
        */
       public Builder setGrapheneCanonize(boolean value) {
         
@@ -6962,6 +7201,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bool graphene_canonize = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearGrapheneCanonize() {
         
@@ -7028,34 +7268,41 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>bytes hash = 2;</code>
+     * @return The hash.
      */
     com.google.protobuf.ByteString getHash();
 
     /**
      * <code>.EccAlgorithm algorithm = 3;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 3;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
 
     /**
      * <code>.EccSignOptions options = 4;</code>
+     * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
      * <code>.EccSignOptions options = 4;</code>
+     * @return The options.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions getOptions();
     /**
@@ -7066,7 +7313,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code EccSignRequest}
    */
-  public  static final class EccSignRequest extends
+  public static final class EccSignRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccSignRequest)
       EccSignRequestOrBuilder {
@@ -7177,7 +7424,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -7192,7 +7441,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -7211,7 +7462,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString hash_;
     /**
      * <code>bytes hash = 2;</code>
+     * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -7220,14 +7473,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 3;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 3;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -7237,19 +7492,24 @@ public final class KeyboxProtobuf {
     private com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions options_;
     /**
      * <code>.EccSignOptions options = 4;</code>
+     * @return Whether the options field is set.
      */
+    @java.lang.Override
     public boolean hasOptions() {
       return options_ != null;
     }
     /**
      * <code>.EccSignOptions options = 4;</code>
+     * @return The options.
      */
+    @java.lang.Override
     public com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions getOptions() {
       return options_ == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions.getDefaultInstance() : options_;
     }
     /**
      * <code>.EccSignOptions options = 4;</code>
      */
+    @java.lang.Override
     public com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
     }
@@ -7622,6 +7882,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -7637,6 +7898,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -7653,6 +7915,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -7666,6 +7930,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -7675,6 +7940,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -7691,12 +7958,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes hash = 2;</code>
+       * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
       /**
        * <code>bytes hash = 2;</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
        */
       public Builder setHash(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -7709,6 +7980,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes hash = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHash() {
         
@@ -7720,21 +7992,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 3;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 3;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 3;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -7742,6 +8020,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 3;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -7754,6 +8034,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -7767,12 +8048,14 @@ public final class KeyboxProtobuf {
           com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions, com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions.Builder, com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptionsOrBuilder> optionsBuilder_;
       /**
        * <code>.EccSignOptions options = 4;</code>
+       * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
        * <code>.EccSignOptions options = 4;</code>
+       * @return The options.
        */
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccSignOptions getOptions() {
         if (optionsBuilder_ == null) {
@@ -7937,43 +8220,50 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>bytes pubkey = 2;</code>
+     * @return The pubkey.
      */
     com.google.protobuf.ByteString getPubkey();
 
     /**
      * <code>bytes hash = 3;</code>
+     * @return The hash.
      */
     com.google.protobuf.ByteString getHash();
 
     /**
      * <code>bytes R = 4;</code>
+     * @return The r.
      */
     com.google.protobuf.ByteString getR();
 
     /**
      * <code>bytes S = 5;</code>
+     * @return The s.
      */
     com.google.protobuf.ByteString getS();
 
     /**
      * <code>uint32 recover_param = 6;</code>
+     * @return The recoverParam.
      */
     int getRecoverParam();
   }
   /**
    * Protobuf type {@code EccSignResult}
    */
-  public  static final class EccSignResult extends
+  public static final class EccSignResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccSignResult)
       EccSignResultOrBuilder {
@@ -8087,7 +8377,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -8102,7 +8394,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -8121,7 +8415,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString pubkey_;
     /**
      * <code>bytes pubkey = 2;</code>
+     * @return The pubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPubkey() {
       return pubkey_;
     }
@@ -8130,7 +8426,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString hash_;
     /**
      * <code>bytes hash = 3;</code>
+     * @return The hash.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getHash() {
       return hash_;
     }
@@ -8139,7 +8437,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString r_;
     /**
      * <code>bytes R = 4;</code>
+     * @return The r.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getR() {
       return r_;
     }
@@ -8148,7 +8448,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString s_;
     /**
      * <code>bytes S = 5;</code>
+     * @return The s.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getS() {
       return s_;
     }
@@ -8157,7 +8459,9 @@ public final class KeyboxProtobuf {
     private int recoverParam_;
     /**
      * <code>uint32 recover_param = 6;</code>
+     * @return The recoverParam.
      */
+    @java.lang.Override
     public int getRecoverParam() {
       return recoverParam_;
     }
@@ -8552,6 +8856,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -8567,6 +8872,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -8583,6 +8889,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -8596,6 +8904,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -8605,6 +8914,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -8621,12 +8932,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString pubkey_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes pubkey = 2;</code>
+       * @return The pubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPubkey() {
         return pubkey_;
       }
       /**
        * <code>bytes pubkey = 2;</code>
+       * @param value The pubkey to set.
+       * @return This builder for chaining.
        */
       public Builder setPubkey(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8639,6 +8954,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes pubkey = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPubkey() {
         
@@ -8650,12 +8966,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString hash_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes hash = 3;</code>
+       * @return The hash.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getHash() {
         return hash_;
       }
       /**
        * <code>bytes hash = 3;</code>
+       * @param value The hash to set.
+       * @return This builder for chaining.
        */
       public Builder setHash(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8668,6 +8988,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes hash = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHash() {
         
@@ -8679,12 +9000,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString r_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes R = 4;</code>
+       * @return The r.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getR() {
         return r_;
       }
       /**
        * <code>bytes R = 4;</code>
+       * @param value The r to set.
+       * @return This builder for chaining.
        */
       public Builder setR(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8697,6 +9022,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes R = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearR() {
         
@@ -8708,12 +9034,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString s_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes S = 5;</code>
+       * @return The s.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getS() {
         return s_;
       }
       /**
        * <code>bytes S = 5;</code>
+       * @param value The s to set.
+       * @return This builder for chaining.
        */
       public Builder setS(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -8726,6 +9056,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes S = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearS() {
         
@@ -8737,12 +9068,16 @@ public final class KeyboxProtobuf {
       private int recoverParam_ ;
       /**
        * <code>uint32 recover_param = 6;</code>
+       * @return The recoverParam.
        */
+      @java.lang.Override
       public int getRecoverParam() {
         return recoverParam_;
       }
       /**
        * <code>uint32 recover_param = 6;</code>
+       * @param value The recoverParam to set.
+       * @return This builder for chaining.
        */
       public Builder setRecoverParam(int value) {
         
@@ -8752,6 +9087,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>uint32 recover_param = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearRecoverParam() {
         
@@ -8818,27 +9154,31 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
   }
   /**
    * Protobuf type {@code EccGetPublicKeyRequest}
    */
-  public  static final class EccGetPublicKeyRequest extends
+  public static final class EccGetPublicKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccGetPublicKeyRequest)
       EccGetPublicKeyRequestOrBuilder {
@@ -8930,7 +9270,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -8945,7 +9287,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -8964,14 +9308,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -9298,6 +9644,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -9313,6 +9660,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -9329,6 +9677,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -9342,6 +9692,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -9351,6 +9702,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -9367,21 +9720,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -9389,6 +9748,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -9401,6 +9762,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -9467,32 +9829,37 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
 
     /**
      * <code>bytes pubkey = 3;</code>
+     * @return The pubkey.
      */
     com.google.protobuf.ByteString getPubkey();
   }
   /**
    * Protobuf type {@code EccGetPublicKeyReply}
    */
-  public  static final class EccGetPublicKeyReply extends
+  public static final class EccGetPublicKeyReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccGetPublicKeyReply)
       EccGetPublicKeyReplyOrBuilder {
@@ -9590,7 +9957,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -9605,7 +9974,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -9624,14 +9995,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -9641,7 +10014,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString pubkey_;
     /**
      * <code>bytes pubkey = 3;</code>
+     * @return The pubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPubkey() {
       return pubkey_;
     }
@@ -9984,6 +10359,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -9999,6 +10375,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -10015,6 +10392,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -10028,6 +10407,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -10037,6 +10417,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -10053,21 +10435,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -10075,6 +10463,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -10087,6 +10477,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -10098,12 +10489,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString pubkey_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes pubkey = 3;</code>
+       * @return The pubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPubkey() {
         return pubkey_;
       }
       /**
        * <code>bytes pubkey = 3;</code>
+       * @param value The pubkey to set.
+       * @return This builder for chaining.
        */
       public Builder setPubkey(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -10116,6 +10511,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes pubkey = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPubkey() {
         
@@ -10182,27 +10578,31 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
   }
   /**
    * Protobuf type {@code EccGetExtendedPublicKeyRequest}
    */
-  public  static final class EccGetExtendedPublicKeyRequest extends
+  public static final class EccGetExtendedPublicKeyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccGetExtendedPublicKeyRequest)
       EccGetExtendedPublicKeyRequestOrBuilder {
@@ -10294,7 +10694,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -10309,7 +10711,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -10328,14 +10732,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -10662,6 +11068,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -10677,6 +11084,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -10693,6 +11101,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -10706,6 +11116,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -10715,6 +11126,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -10731,21 +11144,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -10753,6 +11172,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -10765,6 +11186,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -10831,37 +11253,43 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
 
     /**
      * <code>bytes pubkey = 3;</code>
+     * @return The pubkey.
      */
     com.google.protobuf.ByteString getPubkey();
 
     /**
      * <code>bytes chainCode = 4;</code>
+     * @return The chainCode.
      */
     com.google.protobuf.ByteString getChainCode();
   }
   /**
    * Protobuf type {@code EccGetExtendedPublicKeyReply}
    */
-  public  static final class EccGetExtendedPublicKeyReply extends
+  public static final class EccGetExtendedPublicKeyReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccGetExtendedPublicKeyReply)
       EccGetExtendedPublicKeyReplyOrBuilder {
@@ -10965,7 +11393,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -10980,7 +11410,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -10999,14 +11431,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -11016,7 +11450,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString pubkey_;
     /**
      * <code>bytes pubkey = 3;</code>
+     * @return The pubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getPubkey() {
       return pubkey_;
     }
@@ -11025,7 +11461,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString chainCode_;
     /**
      * <code>bytes chainCode = 4;</code>
+     * @return The chainCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getChainCode() {
       return chainCode_;
     }
@@ -11385,6 +11823,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -11400,6 +11839,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -11416,6 +11856,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -11429,6 +11871,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -11438,6 +11881,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -11454,21 +11899,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -11476,6 +11927,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -11488,6 +11941,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -11499,12 +11953,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString pubkey_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes pubkey = 3;</code>
+       * @return The pubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getPubkey() {
         return pubkey_;
       }
       /**
        * <code>bytes pubkey = 3;</code>
+       * @param value The pubkey to set.
+       * @return This builder for chaining.
        */
       public Builder setPubkey(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -11517,6 +11975,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes pubkey = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPubkey() {
         
@@ -11528,12 +11987,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString chainCode_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes chainCode = 4;</code>
+       * @return The chainCode.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getChainCode() {
         return chainCode_;
       }
       /**
        * <code>bytes chainCode = 4;</code>
+       * @param value The chainCode to set.
+       * @return This builder for chaining.
        */
       public Builder setChainCode(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -11546,6 +12009,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes chainCode = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearChainCode() {
         
@@ -11606,38 +12070,973 @@ public final class KeyboxProtobuf {
 
   }
 
+  public interface GetWalletIdentifierRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetWalletIdentifierRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code GetWalletIdentifierRequest}
+   */
+  public static final class GetWalletIdentifierRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetWalletIdentifierRequest)
+      GetWalletIdentifierRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetWalletIdentifierRequest.newBuilder() to construct.
+    private GetWalletIdentifierRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetWalletIdentifierRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetWalletIdentifierRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetWalletIdentifierRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.class, com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest)) {
+        return super.equals(obj);
+      }
+      com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest other = (com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetWalletIdentifierRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetWalletIdentifierRequest)
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.class, com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.Builder.class);
+      }
+
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest getDefaultInstanceForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest build() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest buildPartial() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest result = new com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest) {
+          return mergeFrom((com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest other) {
+        if (other == com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetWalletIdentifierRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetWalletIdentifierRequest)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetWalletIdentifierRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetWalletIdentifierRequest>() {
+      @java.lang.Override
+      public GetWalletIdentifierRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetWalletIdentifierRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetWalletIdentifierRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetWalletIdentifierRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetWalletIdentifierReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetWalletIdentifierReply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+     * </pre>
+     *
+     * <code>bytes bip32MasterKeyId = 1;</code>
+     * @return The bip32MasterKeyId.
+     */
+    com.google.protobuf.ByteString getBip32MasterKeyId();
+  }
+  /**
+   * Protobuf type {@code GetWalletIdentifierReply}
+   */
+  public static final class GetWalletIdentifierReply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetWalletIdentifierReply)
+      GetWalletIdentifierReplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetWalletIdentifierReply.newBuilder() to construct.
+    private GetWalletIdentifierReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetWalletIdentifierReply() {
+      bip32MasterKeyId_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetWalletIdentifierReply();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetWalletIdentifierReply(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              bip32MasterKeyId_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierReply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierReply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.class, com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.Builder.class);
+    }
+
+    public static final int BIP32MASTERKEYID_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString bip32MasterKeyId_;
+    /**
+     * <pre>
+     * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+     * </pre>
+     *
+     * <code>bytes bip32MasterKeyId = 1;</code>
+     * @return The bip32MasterKeyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getBip32MasterKeyId() {
+      return bip32MasterKeyId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!bip32MasterKeyId_.isEmpty()) {
+        output.writeBytes(1, bip32MasterKeyId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!bip32MasterKeyId_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, bip32MasterKeyId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply)) {
+        return super.equals(obj);
+      }
+      com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply other = (com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply) obj;
+
+      if (!getBip32MasterKeyId()
+          .equals(other.getBip32MasterKeyId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BIP32MASTERKEYID_FIELD_NUMBER;
+      hash = (53 * hash) + getBip32MasterKeyId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetWalletIdentifierReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetWalletIdentifierReply)
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierReply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierReply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.class, com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.Builder.class);
+      }
+
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bip32MasterKeyId_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_GetWalletIdentifierReply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply getDefaultInstanceForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply build() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply buildPartial() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply result = new com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply(this);
+        result.bip32MasterKeyId_ = bip32MasterKeyId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply) {
+          return mergeFrom((com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply other) {
+        if (other == com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply.getDefaultInstance()) return this;
+        if (other.getBip32MasterKeyId() != com.google.protobuf.ByteString.EMPTY) {
+          setBip32MasterKeyId(other.getBip32MasterKeyId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString bip32MasterKeyId_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+       * </pre>
+       *
+       * <code>bytes bip32MasterKeyId = 1;</code>
+       * @return The bip32MasterKeyId.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getBip32MasterKeyId() {
+        return bip32MasterKeyId_;
+      }
+      /**
+       * <pre>
+       * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+       * </pre>
+       *
+       * <code>bytes bip32MasterKeyId = 1;</code>
+       * @param value The bip32MasterKeyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBip32MasterKeyId(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bip32MasterKeyId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+       * </pre>
+       *
+       * <code>bytes bip32MasterKeyId = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBip32MasterKeyId() {
+        
+        bip32MasterKeyId_ = getDefaultInstance().getBip32MasterKeyId();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetWalletIdentifierReply)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetWalletIdentifierReply)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetWalletIdentifierReply>
+        PARSER = new com.google.protobuf.AbstractParser<GetWalletIdentifierReply>() {
+      @java.lang.Override
+      public GetWalletIdentifierReply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetWalletIdentifierReply(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetWalletIdentifierReply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetWalletIdentifierReply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.keybox.plugins.wallet.KeyboxProtobuf.GetWalletIdentifierReply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface EccMultiplyRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:EccMultiplyRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
 
     /**
      * <code>bytes input_pubkey = 3;</code>
+     * @return The inputPubkey.
      */
     com.google.protobuf.ByteString getInputPubkey();
   }
   /**
    * Protobuf type {@code EccMultiplyRequest}
    */
-  public  static final class EccMultiplyRequest extends
+  public static final class EccMultiplyRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccMultiplyRequest)
       EccMultiplyRequestOrBuilder {
@@ -11735,7 +13134,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -11750,7 +13151,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -11769,14 +13172,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -11786,7 +13191,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString inputPubkey_;
     /**
      * <code>bytes input_pubkey = 3;</code>
+     * @return The inputPubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getInputPubkey() {
       return inputPubkey_;
     }
@@ -12129,6 +13536,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -12144,6 +13552,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -12160,6 +13569,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -12173,6 +13584,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -12182,6 +13594,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -12198,21 +13612,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -12220,6 +13640,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -12232,6 +13654,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -12243,12 +13666,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString inputPubkey_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes input_pubkey = 3;</code>
+       * @return The inputPubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getInputPubkey() {
         return inputPubkey_;
       }
       /**
        * <code>bytes input_pubkey = 3;</code>
+       * @param value The inputPubkey to set.
+       * @return This builder for chaining.
        */
       public Builder setInputPubkey(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -12261,6 +13688,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes input_pubkey = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearInputPubkey() {
         
@@ -12327,42 +13755,49 @@ public final class KeyboxProtobuf {
 
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
     java.lang.String getHdPath();
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
     com.google.protobuf.ByteString
         getHdPathBytes();
 
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
     int getAlgorithmValue();
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
     com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm();
 
     /**
      * <code>bytes input_pubkey = 3;</code>
+     * @return The inputPubkey.
      */
     com.google.protobuf.ByteString getInputPubkey();
 
     /**
      * <code>bytes dev_pubkey = 4;</code>
+     * @return The devPubkey.
      */
     com.google.protobuf.ByteString getDevPubkey();
 
     /**
      * <code>bytes result = 5;</code>
+     * @return The result.
      */
     com.google.protobuf.ByteString getResult();
   }
   /**
    * Protobuf type {@code EccMultiplyReply}
    */
-  public  static final class EccMultiplyReply extends
+  public static final class EccMultiplyReply extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EccMultiplyReply)
       EccMultiplyReplyOrBuilder {
@@ -12472,7 +13907,9 @@ public final class KeyboxProtobuf {
     private volatile java.lang.Object hdPath_;
     /**
      * <code>string hdPath = 1;</code>
+     * @return The hdPath.
      */
+    @java.lang.Override
     public java.lang.String getHdPath() {
       java.lang.Object ref = hdPath_;
       if (ref instanceof java.lang.String) {
@@ -12487,7 +13924,9 @@ public final class KeyboxProtobuf {
     }
     /**
      * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getHdPathBytes() {
       java.lang.Object ref = hdPath_;
@@ -12506,14 +13945,16 @@ public final class KeyboxProtobuf {
     private int algorithm_;
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The enum numeric value on the wire for algorithm.
      */
-    public int getAlgorithmValue() {
+    @java.lang.Override public int getAlgorithmValue() {
       return algorithm_;
     }
     /**
      * <code>.EccAlgorithm algorithm = 2;</code>
+     * @return The algorithm.
      */
-    public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
       @SuppressWarnings("deprecation")
       com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
       return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.UNRECOGNIZED : result;
@@ -12523,7 +13964,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString inputPubkey_;
     /**
      * <code>bytes input_pubkey = 3;</code>
+     * @return The inputPubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getInputPubkey() {
       return inputPubkey_;
     }
@@ -12532,7 +13975,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString devPubkey_;
     /**
      * <code>bytes dev_pubkey = 4;</code>
+     * @return The devPubkey.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getDevPubkey() {
       return devPubkey_;
     }
@@ -12541,7 +13986,9 @@ public final class KeyboxProtobuf {
     private com.google.protobuf.ByteString result_;
     /**
      * <code>bytes result = 5;</code>
+     * @return The result.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getResult() {
       return result_;
     }
@@ -12918,6 +14365,7 @@ public final class KeyboxProtobuf {
       private java.lang.Object hdPath_ = "";
       /**
        * <code>string hdPath = 1;</code>
+       * @return The hdPath.
        */
       public java.lang.String getHdPath() {
         java.lang.Object ref = hdPath_;
@@ -12933,6 +14381,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
        */
       public com.google.protobuf.ByteString
           getHdPathBytes() {
@@ -12949,6 +14398,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPath(
           java.lang.String value) {
@@ -12962,6 +14413,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearHdPath() {
         
@@ -12971,6 +14423,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
        */
       public Builder setHdPathBytes(
           com.google.protobuf.ByteString value) {
@@ -12987,21 +14441,27 @@ public final class KeyboxProtobuf {
       private int algorithm_ = 0;
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The enum numeric value on the wire for algorithm.
        */
-      public int getAlgorithmValue() {
+      @java.lang.Override public int getAlgorithmValue() {
         return algorithm_;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The enum numeric value on the wire for algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithmValue(int value) {
+        
         algorithm_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return The algorithm.
        */
+      @java.lang.Override
       public com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm getAlgorithm() {
         @SuppressWarnings("deprecation")
         com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm result = com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm.valueOf(algorithm_);
@@ -13009,6 +14469,8 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @param value The algorithm to set.
+       * @return This builder for chaining.
        */
       public Builder setAlgorithm(com.keybox.plugins.wallet.KeyboxProtobuf.EccAlgorithm value) {
         if (value == null) {
@@ -13021,6 +14483,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>.EccAlgorithm algorithm = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearAlgorithm() {
         
@@ -13032,12 +14495,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString inputPubkey_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes input_pubkey = 3;</code>
+       * @return The inputPubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getInputPubkey() {
         return inputPubkey_;
       }
       /**
        * <code>bytes input_pubkey = 3;</code>
+       * @param value The inputPubkey to set.
+       * @return This builder for chaining.
        */
       public Builder setInputPubkey(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -13050,6 +14517,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes input_pubkey = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearInputPubkey() {
         
@@ -13061,12 +14529,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString devPubkey_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes dev_pubkey = 4;</code>
+       * @return The devPubkey.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getDevPubkey() {
         return devPubkey_;
       }
       /**
        * <code>bytes dev_pubkey = 4;</code>
+       * @param value The devPubkey to set.
+       * @return This builder for chaining.
        */
       public Builder setDevPubkey(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -13079,6 +14551,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes dev_pubkey = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDevPubkey() {
         
@@ -13090,12 +14563,16 @@ public final class KeyboxProtobuf {
       private com.google.protobuf.ByteString result_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes result = 5;</code>
+       * @return The result.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getResult() {
         return result_;
       }
       /**
        * <code>bytes result = 5;</code>
+       * @param value The result to set.
+       * @return This builder for chaining.
        */
       public Builder setResult(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -13108,6 +14585,7 @@ public final class KeyboxProtobuf {
       }
       /**
        * <code>bytes result = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResult() {
         
@@ -13175,7 +14653,7 @@ public final class KeyboxProtobuf {
   /**
    * Protobuf type {@code EraseDataRequest}
    */
-  public  static final class EraseDataRequest extends
+  public static final class EraseDataRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:EraseDataRequest)
       EraseDataRequestOrBuilder {
@@ -13586,6 +15064,1101 @@ public final class KeyboxProtobuf {
 
   }
 
+  public interface BitcoinSignRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BitcoinSignRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool testnet = 1;</code>
+     * @return The testnet.
+     */
+    boolean getTestnet();
+
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, input updated if needed.
+     * </pre>
+     *
+     * <code>bytes psbt = 2;</code>
+     * @return The psbt.
+     */
+    com.google.protobuf.ByteString getPsbt();
+  }
+  /**
+   * Protobuf type {@code BitcoinSignRequest}
+   */
+  public static final class BitcoinSignRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BitcoinSignRequest)
+      BitcoinSignRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BitcoinSignRequest.newBuilder() to construct.
+    private BitcoinSignRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BitcoinSignRequest() {
+      psbt_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BitcoinSignRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BitcoinSignRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              testnet_ = input.readBool();
+              break;
+            }
+            case 18: {
+
+              psbt_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.class, com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.Builder.class);
+    }
+
+    public static final int TESTNET_FIELD_NUMBER = 1;
+    private boolean testnet_;
+    /**
+     * <code>bool testnet = 1;</code>
+     * @return The testnet.
+     */
+    @java.lang.Override
+    public boolean getTestnet() {
+      return testnet_;
+    }
+
+    public static final int PSBT_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString psbt_;
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, input updated if needed.
+     * </pre>
+     *
+     * <code>bytes psbt = 2;</code>
+     * @return The psbt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPsbt() {
+      return psbt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (testnet_ != false) {
+        output.writeBool(1, testnet_);
+      }
+      if (!psbt_.isEmpty()) {
+        output.writeBytes(2, psbt_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (testnet_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, testnet_);
+      }
+      if (!psbt_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, psbt_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest)) {
+        return super.equals(obj);
+      }
+      com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest other = (com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest) obj;
+
+      if (getTestnet()
+          != other.getTestnet()) return false;
+      if (!getPsbt()
+          .equals(other.getPsbt())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TESTNET_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getTestnet());
+      hash = (37 * hash) + PSBT_FIELD_NUMBER;
+      hash = (53 * hash) + getPsbt().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BitcoinSignRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BitcoinSignRequest)
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.class, com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.Builder.class);
+      }
+
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        testnet_ = false;
+
+        psbt_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest getDefaultInstanceForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest build() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest buildPartial() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest result = new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest(this);
+        result.testnet_ = testnet_;
+        result.psbt_ = psbt_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest) {
+          return mergeFrom((com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest other) {
+        if (other == com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest.getDefaultInstance()) return this;
+        if (other.getTestnet() != false) {
+          setTestnet(other.getTestnet());
+        }
+        if (other.getPsbt() != com.google.protobuf.ByteString.EMPTY) {
+          setPsbt(other.getPsbt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean testnet_ ;
+      /**
+       * <code>bool testnet = 1;</code>
+       * @return The testnet.
+       */
+      @java.lang.Override
+      public boolean getTestnet() {
+        return testnet_;
+      }
+      /**
+       * <code>bool testnet = 1;</code>
+       * @param value The testnet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestnet(boolean value) {
+        
+        testnet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool testnet = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestnet() {
+        
+        testnet_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString psbt_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, input updated if needed.
+       * </pre>
+       *
+       * <code>bytes psbt = 2;</code>
+       * @return The psbt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPsbt() {
+        return psbt_;
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, input updated if needed.
+       * </pre>
+       *
+       * <code>bytes psbt = 2;</code>
+       * @param value The psbt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPsbt(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        psbt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, input updated if needed.
+       * </pre>
+       *
+       * <code>bytes psbt = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPsbt() {
+        
+        psbt_ = getDefaultInstance().getPsbt();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BitcoinSignRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:BitcoinSignRequest)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BitcoinSignRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BitcoinSignRequest>() {
+      @java.lang.Override
+      public BitcoinSignRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BitcoinSignRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BitcoinSignRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BitcoinSignRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BitcoinSignResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BitcoinSignResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, some inputs signed.
+     * </pre>
+     *
+     * <code>bytes psbt = 1;</code>
+     * @return The psbt.
+     */
+    com.google.protobuf.ByteString getPsbt();
+  }
+  /**
+   * Protobuf type {@code BitcoinSignResult}
+   */
+  public static final class BitcoinSignResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BitcoinSignResult)
+      BitcoinSignResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BitcoinSignResult.newBuilder() to construct.
+    private BitcoinSignResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BitcoinSignResult() {
+      psbt_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BitcoinSignResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BitcoinSignResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+
+              psbt_ = input.readBytes();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.class, com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.Builder.class);
+    }
+
+    public static final int PSBT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString psbt_;
+    /**
+     * <pre>
+     * bip174, partial signed bitcoin transaction, some inputs signed.
+     * </pre>
+     *
+     * <code>bytes psbt = 1;</code>
+     * @return The psbt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPsbt() {
+      return psbt_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!psbt_.isEmpty()) {
+        output.writeBytes(1, psbt_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!psbt_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, psbt_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult)) {
+        return super.equals(obj);
+      }
+      com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult other = (com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult) obj;
+
+      if (!getPsbt()
+          .equals(other.getPsbt())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PSBT_FIELD_NUMBER;
+      hash = (53 * hash) + getPsbt().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BitcoinSignResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BitcoinSignResult)
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.class, com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.Builder.class);
+      }
+
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        psbt_ = com.google.protobuf.ByteString.EMPTY;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.internal_static_BitcoinSignResult_descriptor;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult getDefaultInstanceForType() {
+        return com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult build() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult buildPartial() {
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult result = new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult(this);
+        result.psbt_ = psbt_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult) {
+          return mergeFrom((com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult other) {
+        if (other == com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult.getDefaultInstance()) return this;
+        if (other.getPsbt() != com.google.protobuf.ByteString.EMPTY) {
+          setPsbt(other.getPsbt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.ByteString psbt_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, some inputs signed.
+       * </pre>
+       *
+       * <code>bytes psbt = 1;</code>
+       * @return The psbt.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPsbt() {
+        return psbt_;
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, some inputs signed.
+       * </pre>
+       *
+       * <code>bytes psbt = 1;</code>
+       * @param value The psbt to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPsbt(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        psbt_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bip174, partial signed bitcoin transaction, some inputs signed.
+       * </pre>
+       *
+       * <code>bytes psbt = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPsbt() {
+        
+        psbt_ = getDefaultInstance().getPsbt();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BitcoinSignResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:BitcoinSignResult)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BitcoinSignResult>
+        PARSER = new com.google.protobuf.AbstractParser<BitcoinSignResult>() {
+      @java.lang.Override
+      public BitcoinSignResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BitcoinSignResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BitcoinSignResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BitcoinSignResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_RequestRejected_descriptor;
   private static final 
@@ -13672,6 +16245,16 @@ public final class KeyboxProtobuf {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EccGetExtendedPublicKeyReply_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetWalletIdentifierRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetWalletIdentifierRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetWalletIdentifierReply_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetWalletIdentifierReply_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_EccMultiplyRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13686,6 +16269,16 @@ public final class KeyboxProtobuf {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EraseDataRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BitcoinSignRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BitcoinSignRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BitcoinSignResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BitcoinSignResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13727,17 +16320,22 @@ public final class KeyboxProtobuf {
       "2\r.EccAlgorithm\"s\n\034EccGetExtendedPublicK" +
       "eyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001" +
       "(\0162\r.EccAlgorithm\022\016\n\006pubkey\030\003 \001(\014\022\021\n\tcha" +
-      "inCode\030\004 \001(\014\"\\\n\022EccMultiplyRequest\022\016\n\006hd" +
-      "Path\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.EccAlgor" +
-      "ithm\022\024\n\014input_pubkey\030\003 \001(\014\"~\n\020EccMultipl" +
-      "yReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(" +
-      "\0162\r.EccAlgorithm\022\024\n\014input_pubkey\030\003 \001(\014\022\022" +
-      "\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 \001(\014\"\022\n\020Er" +
-      "aseDataRequest*/\n\nDeviceMode\022\023\n\017MODE_BOO" +
-      "TLOADER\020\000\022\014\n\010MODE_APP\020\001*2\n\tLockState\022\013\n\007" +
-      "UNKNOWN\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002*\035\n\014E" +
-      "ccAlgorithm\022\r\n\tSECP256K1\020\000B+\n\031com.keybox" +
-      ".plugins.walletB\016KeyboxProtobufb\006proto3"
+      "inCode\030\004 \001(\014\"\034\n\032GetWalletIdentifierReque" +
+      "st\"4\n\030GetWalletIdentifierReply\022\030\n\020bip32M" +
+      "asterKeyId\030\001 \001(\014\"\\\n\022EccMultiplyRequest\022\016" +
+      "\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030\002 \001(\0162\r.EccA" +
+      "lgorithm\022\024\n\014input_pubkey\030\003 \001(\014\"~\n\020EccMul" +
+      "tiplyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030" +
+      "\002 \001(\0162\r.EccAlgorithm\022\024\n\014input_pubkey\030\003 \001" +
+      "(\014\022\022\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 \001(\014\"\022" +
+      "\n\020EraseDataRequest\"3\n\022BitcoinSignRequest" +
+      "\022\017\n\007testnet\030\001 \001(\010\022\014\n\004psbt\030\002 \001(\014\"!\n\021Bitco" +
+      "inSignResult\022\014\n\004psbt\030\001 \001(\014*/\n\nDeviceMode" +
+      "\022\023\n\017MODE_BOOTLOADER\020\000\022\014\n\010MODE_APP\020\001*2\n\tL" +
+      "ockState\022\013\n\007UNKNOWN\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006L" +
+      "OCKED\020\002*\035\n\014EccAlgorithm\022\r\n\tSECP256K1\020\000B+" +
+      "\n\031com.keybox.plugins.walletB\016KeyboxProto" +
+      "bufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13845,24 +16443,48 @@ public final class KeyboxProtobuf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EccGetExtendedPublicKeyReply_descriptor,
         new java.lang.String[] { "HdPath", "Algorithm", "Pubkey", "ChainCode", });
-    internal_static_EccMultiplyRequest_descriptor =
+    internal_static_GetWalletIdentifierRequest_descriptor =
       getDescriptor().getMessageTypes().get(17);
+    internal_static_GetWalletIdentifierRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetWalletIdentifierRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_GetWalletIdentifierReply_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_GetWalletIdentifierReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetWalletIdentifierReply_descriptor,
+        new java.lang.String[] { "Bip32MasterKeyId", });
+    internal_static_EccMultiplyRequest_descriptor =
+      getDescriptor().getMessageTypes().get(19);
     internal_static_EccMultiplyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EccMultiplyRequest_descriptor,
         new java.lang.String[] { "HdPath", "Algorithm", "InputPubkey", });
     internal_static_EccMultiplyReply_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_EccMultiplyReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EccMultiplyReply_descriptor,
         new java.lang.String[] { "HdPath", "Algorithm", "InputPubkey", "DevPubkey", "Result", });
     internal_static_EraseDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_EraseDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EraseDataRequest_descriptor,
         new java.lang.String[] { });
+    internal_static_BitcoinSignRequest_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_BitcoinSignRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BitcoinSignRequest_descriptor,
+        new java.lang.String[] { "Testnet", "Psbt", });
+    internal_static_BitcoinSignResult_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_BitcoinSignResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BitcoinSignResult_descriptor,
+        new java.lang.String[] { "Psbt", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

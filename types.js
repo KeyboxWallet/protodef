@@ -21,5 +21,9 @@ module.exports = {
     MsgTypeEccGetPublicKeyReply: 18,
     MsgTypeEccMultiplyRequest: 19,
     MsgTypeEccMultiplyReply: 20,
-    MsgTypeHighLimit: 21, // for compare
+    MsgTypeBitcoinSignRequest: 21,
+    MsgTypeEthereumSignRequest: 22,
+    MsgTypeGetWalletIdentifierRequest: 23,
+    MsgTypeGetWalletIdentifierReply: 24,
+    MsgTypeHighLimit: 25, // for compare
 };

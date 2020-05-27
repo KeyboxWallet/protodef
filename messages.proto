@@ -119,6 +119,14 @@ message EccGetExtendedPublicKeyReply {
     bytes chainCode = 4;
 }
 
+message GetWalletIdentifierRequest {
+
+}
+
+message GetWalletIdentifierReply {
+    bytes bip32MasterKeyId = 1; // hash160(master pubkey), hash160 = lamda x: ripmd160(sha256(x))
+}
+
 message EccMultiplyRequest {
     string hdPath = 1;
     EccAlgorithm algorithm = 2;
@@ -137,3 +145,11 @@ message EraseDataRequest {
 
 }
 
+message BitcoinSignRequest {
+    bool testnet = 1;
+    bytes psbt = 2;    // bip174, partial signed bitcoin transaction, input updated if needed.
+}
+
+message BitcoinSignResult {
+    bytes psbt = 1;    // bip174, partial signed bitcoin transaction, some inputs signed.
+}
