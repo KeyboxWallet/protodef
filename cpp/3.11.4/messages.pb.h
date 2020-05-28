@@ -48,13 +48,19 @@ struct TableStruct_messages_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[20]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[24]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_messages_2eproto;
+class BitcoinSignRequest;
+class BitcoinSignRequestDefaultTypeInternal;
+extern BitcoinSignRequestDefaultTypeInternal _BitcoinSignRequest_default_instance_;
+class BitcoinSignResult;
+class BitcoinSignResultDefaultTypeInternal;
+extern BitcoinSignResultDefaultTypeInternal _BitcoinSignResult_default_instance_;
 class EccGetExtendedPublicKeyReply;
 class EccGetExtendedPublicKeyReplyDefaultTypeInternal;
 extern EccGetExtendedPublicKeyReplyDefaultTypeInternal _EccGetExtendedPublicKeyReply_default_instance_;
@@ -94,6 +100,12 @@ extern GetModeAndVersionReplyDefaultTypeInternal _GetModeAndVersionReply_default
 class GetModeAndVersionRequest;
 class GetModeAndVersionRequestDefaultTypeInternal;
 extern GetModeAndVersionRequestDefaultTypeInternal _GetModeAndVersionRequest_default_instance_;
+class GetWalletIdentifierReply;
+class GetWalletIdentifierReplyDefaultTypeInternal;
+extern GetWalletIdentifierReplyDefaultTypeInternal _GetWalletIdentifierReply_default_instance_;
+class GetWalletIdentifierRequest;
+class GetWalletIdentifierRequestDefaultTypeInternal;
+extern GetWalletIdentifierRequestDefaultTypeInternal _GetWalletIdentifierRequest_default_instance_;
 class LockSerialNo;
 class LockSerialNoDefaultTypeInternal;
 extern LockSerialNoDefaultTypeInternal _LockSerialNo_default_instance_;
@@ -116,6 +128,8 @@ class lockSerialNoReply;
 class lockSerialNoReplyDefaultTypeInternal;
 extern lockSerialNoReplyDefaultTypeInternal _lockSerialNoReply_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
+template<> ::BitcoinSignRequest* Arena::CreateMaybeMessage<::BitcoinSignRequest>(Arena*);
+template<> ::BitcoinSignResult* Arena::CreateMaybeMessage<::BitcoinSignResult>(Arena*);
 template<> ::EccGetExtendedPublicKeyReply* Arena::CreateMaybeMessage<::EccGetExtendedPublicKeyReply>(Arena*);
 template<> ::EccGetExtendedPublicKeyRequest* Arena::CreateMaybeMessage<::EccGetExtendedPublicKeyRequest>(Arena*);
 template<> ::EccGetPublicKeyReply* Arena::CreateMaybeMessage<::EccGetPublicKeyReply>(Arena*);
@@ -129,6 +143,8 @@ template<> ::EraseDataRequest* Arena::CreateMaybeMessage<::EraseDataRequest>(Are
 template<> ::GenericConfirmReply* Arena::CreateMaybeMessage<::GenericConfirmReply>(Arena*);
 template<> ::GetModeAndVersionReply* Arena::CreateMaybeMessage<::GetModeAndVersionReply>(Arena*);
 template<> ::GetModeAndVersionRequest* Arena::CreateMaybeMessage<::GetModeAndVersionRequest>(Arena*);
+template<> ::GetWalletIdentifierReply* Arena::CreateMaybeMessage<::GetWalletIdentifierReply>(Arena*);
+template<> ::GetWalletIdentifierRequest* Arena::CreateMaybeMessage<::GetWalletIdentifierRequest>(Arena*);
 template<> ::LockSerialNo* Arena::CreateMaybeMessage<::LockSerialNo>(Arena*);
 template<> ::RequestRejected* Arena::CreateMaybeMessage<::RequestRejected>(Arena*);
 template<> ::SendUpgradeFirmware* Arena::CreateMaybeMessage<::SendUpgradeFirmware>(Arena*);
@@ -2837,6 +2853,256 @@ class EccGetExtendedPublicKeyReply :
 };
 // -------------------------------------------------------------------
 
+class GetWalletIdentifierRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:GetWalletIdentifierRequest) */ {
+ public:
+  GetWalletIdentifierRequest();
+  virtual ~GetWalletIdentifierRequest();
+
+  GetWalletIdentifierRequest(const GetWalletIdentifierRequest& from);
+  GetWalletIdentifierRequest(GetWalletIdentifierRequest&& from) noexcept
+    : GetWalletIdentifierRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline GetWalletIdentifierRequest& operator=(const GetWalletIdentifierRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetWalletIdentifierRequest& operator=(GetWalletIdentifierRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const GetWalletIdentifierRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetWalletIdentifierRequest* internal_default_instance() {
+    return reinterpret_cast<const GetWalletIdentifierRequest*>(
+               &_GetWalletIdentifierRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(GetWalletIdentifierRequest& a, GetWalletIdentifierRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetWalletIdentifierRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetWalletIdentifierRequest* New() const final {
+    return CreateMaybeMessage<GetWalletIdentifierRequest>(nullptr);
+  }
+
+  GetWalletIdentifierRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<GetWalletIdentifierRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const GetWalletIdentifierRequest& from);
+  void MergeFrom(const GetWalletIdentifierRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetWalletIdentifierRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "GetWalletIdentifierRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_messages_2eproto);
+    return ::descriptor_table_messages_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:GetWalletIdentifierRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_messages_2eproto;
+};
+// -------------------------------------------------------------------
+
+class GetWalletIdentifierReply :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:GetWalletIdentifierReply) */ {
+ public:
+  GetWalletIdentifierReply();
+  virtual ~GetWalletIdentifierReply();
+
+  GetWalletIdentifierReply(const GetWalletIdentifierReply& from);
+  GetWalletIdentifierReply(GetWalletIdentifierReply&& from) noexcept
+    : GetWalletIdentifierReply() {
+    *this = ::std::move(from);
+  }
+
+  inline GetWalletIdentifierReply& operator=(const GetWalletIdentifierReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline GetWalletIdentifierReply& operator=(GetWalletIdentifierReply&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const GetWalletIdentifierReply& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const GetWalletIdentifierReply* internal_default_instance() {
+    return reinterpret_cast<const GetWalletIdentifierReply*>(
+               &_GetWalletIdentifierReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  friend void swap(GetWalletIdentifierReply& a, GetWalletIdentifierReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(GetWalletIdentifierReply* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline GetWalletIdentifierReply* New() const final {
+    return CreateMaybeMessage<GetWalletIdentifierReply>(nullptr);
+  }
+
+  GetWalletIdentifierReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<GetWalletIdentifierReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const GetWalletIdentifierReply& from);
+  void MergeFrom(const GetWalletIdentifierReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(GetWalletIdentifierReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "GetWalletIdentifierReply";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_messages_2eproto);
+    return ::descriptor_table_messages_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBip32MasterKeyIdFieldNumber = 1,
+  };
+  // bytes bip32MasterKeyId = 1;
+  void clear_bip32masterkeyid();
+  const std::string& bip32masterkeyid() const;
+  void set_bip32masterkeyid(const std::string& value);
+  void set_bip32masterkeyid(std::string&& value);
+  void set_bip32masterkeyid(const char* value);
+  void set_bip32masterkeyid(const void* value, size_t size);
+  std::string* mutable_bip32masterkeyid();
+  std::string* release_bip32masterkeyid();
+  void set_allocated_bip32masterkeyid(std::string* bip32masterkeyid);
+  private:
+  const std::string& _internal_bip32masterkeyid() const;
+  void _internal_set_bip32masterkeyid(const std::string& value);
+  std::string* _internal_mutable_bip32masterkeyid();
+  public:
+
+  // @@protoc_insertion_point(class_scope:GetWalletIdentifierReply)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bip32masterkeyid_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_messages_2eproto;
+};
+// -------------------------------------------------------------------
+
 class EccMultiplyRequest :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:EccMultiplyRequest) */ {
  public:
@@ -2879,7 +3145,7 @@ class EccMultiplyRequest :
                &_EccMultiplyRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    17;
+    19;
 
   friend void swap(EccMultiplyRequest& a, EccMultiplyRequest& b) {
     a.Swap(&b);
@@ -3043,7 +3309,7 @@ class EccMultiplyReply :
                &_EccMultiplyReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    18;
+    20;
 
   friend void swap(EccMultiplyReply& a, EccMultiplyReply& b) {
     a.Swap(&b);
@@ -3243,7 +3509,7 @@ class EraseDataRequest :
                &_EraseDataRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    19;
+    21;
 
   friend void swap(EraseDataRequest& a, EraseDataRequest& b) {
     a.Swap(&b);
@@ -3311,6 +3577,287 @@ class EraseDataRequest :
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_messages_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BitcoinSignRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:BitcoinSignRequest) */ {
+ public:
+  BitcoinSignRequest();
+  virtual ~BitcoinSignRequest();
+
+  BitcoinSignRequest(const BitcoinSignRequest& from);
+  BitcoinSignRequest(BitcoinSignRequest&& from) noexcept
+    : BitcoinSignRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline BitcoinSignRequest& operator=(const BitcoinSignRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BitcoinSignRequest& operator=(BitcoinSignRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BitcoinSignRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BitcoinSignRequest* internal_default_instance() {
+    return reinterpret_cast<const BitcoinSignRequest*>(
+               &_BitcoinSignRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  friend void swap(BitcoinSignRequest& a, BitcoinSignRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BitcoinSignRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BitcoinSignRequest* New() const final {
+    return CreateMaybeMessage<BitcoinSignRequest>(nullptr);
+  }
+
+  BitcoinSignRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BitcoinSignRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BitcoinSignRequest& from);
+  void MergeFrom(const BitcoinSignRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BitcoinSignRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "BitcoinSignRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_messages_2eproto);
+    return ::descriptor_table_messages_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPsbtFieldNumber = 2,
+    kTestnetFieldNumber = 1,
+  };
+  // bytes psbt = 2;
+  void clear_psbt();
+  const std::string& psbt() const;
+  void set_psbt(const std::string& value);
+  void set_psbt(std::string&& value);
+  void set_psbt(const char* value);
+  void set_psbt(const void* value, size_t size);
+  std::string* mutable_psbt();
+  std::string* release_psbt();
+  void set_allocated_psbt(std::string* psbt);
+  private:
+  const std::string& _internal_psbt() const;
+  void _internal_set_psbt(const std::string& value);
+  std::string* _internal_mutable_psbt();
+  public:
+
+  // bool testnet = 1;
+  void clear_testnet();
+  bool testnet() const;
+  void set_testnet(bool value);
+  private:
+  bool _internal_testnet() const;
+  void _internal_set_testnet(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:BitcoinSignRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr psbt_;
+  bool testnet_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_messages_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BitcoinSignResult :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:BitcoinSignResult) */ {
+ public:
+  BitcoinSignResult();
+  virtual ~BitcoinSignResult();
+
+  BitcoinSignResult(const BitcoinSignResult& from);
+  BitcoinSignResult(BitcoinSignResult&& from) noexcept
+    : BitcoinSignResult() {
+    *this = ::std::move(from);
+  }
+
+  inline BitcoinSignResult& operator=(const BitcoinSignResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline BitcoinSignResult& operator=(BitcoinSignResult&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const BitcoinSignResult& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const BitcoinSignResult* internal_default_instance() {
+    return reinterpret_cast<const BitcoinSignResult*>(
+               &_BitcoinSignResult_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  friend void swap(BitcoinSignResult& a, BitcoinSignResult& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(BitcoinSignResult* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline BitcoinSignResult* New() const final {
+    return CreateMaybeMessage<BitcoinSignResult>(nullptr);
+  }
+
+  BitcoinSignResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<BitcoinSignResult>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const BitcoinSignResult& from);
+  void MergeFrom(const BitcoinSignResult& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(BitcoinSignResult* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "BitcoinSignResult";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_messages_2eproto);
+    return ::descriptor_table_messages_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPsbtFieldNumber = 1,
+  };
+  // bytes psbt = 1;
+  void clear_psbt();
+  const std::string& psbt() const;
+  void set_psbt(const std::string& value);
+  void set_psbt(std::string&& value);
+  void set_psbt(const char* value);
+  void set_psbt(const void* value, size_t size);
+  std::string* mutable_psbt();
+  std::string* release_psbt();
+  void set_allocated_psbt(std::string* psbt);
+  private:
+  const std::string& _internal_psbt() const;
+  void _internal_set_psbt(const std::string& value);
+  std::string* _internal_mutable_psbt();
+  public:
+
+  // @@protoc_insertion_point(class_scope:BitcoinSignResult)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr psbt_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_messages_2eproto;
 };
@@ -5291,6 +5838,74 @@ inline void EccGetExtendedPublicKeyReply::set_allocated_chaincode(std::string* c
 
 // -------------------------------------------------------------------
 
+// GetWalletIdentifierRequest
+
+// -------------------------------------------------------------------
+
+// GetWalletIdentifierReply
+
+// bytes bip32MasterKeyId = 1;
+inline void GetWalletIdentifierReply::clear_bip32masterkeyid() {
+  bip32masterkeyid_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& GetWalletIdentifierReply::bip32masterkeyid() const {
+  // @@protoc_insertion_point(field_get:GetWalletIdentifierReply.bip32MasterKeyId)
+  return _internal_bip32masterkeyid();
+}
+inline void GetWalletIdentifierReply::set_bip32masterkeyid(const std::string& value) {
+  _internal_set_bip32masterkeyid(value);
+  // @@protoc_insertion_point(field_set:GetWalletIdentifierReply.bip32MasterKeyId)
+}
+inline std::string* GetWalletIdentifierReply::mutable_bip32masterkeyid() {
+  // @@protoc_insertion_point(field_mutable:GetWalletIdentifierReply.bip32MasterKeyId)
+  return _internal_mutable_bip32masterkeyid();
+}
+inline const std::string& GetWalletIdentifierReply::_internal_bip32masterkeyid() const {
+  return bip32masterkeyid_.GetNoArena();
+}
+inline void GetWalletIdentifierReply::_internal_set_bip32masterkeyid(const std::string& value) {
+  
+  bip32masterkeyid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void GetWalletIdentifierReply::set_bip32masterkeyid(std::string&& value) {
+  
+  bip32masterkeyid_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:GetWalletIdentifierReply.bip32MasterKeyId)
+}
+inline void GetWalletIdentifierReply::set_bip32masterkeyid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  bip32masterkeyid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:GetWalletIdentifierReply.bip32MasterKeyId)
+}
+inline void GetWalletIdentifierReply::set_bip32masterkeyid(const void* value, size_t size) {
+  
+  bip32masterkeyid_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:GetWalletIdentifierReply.bip32MasterKeyId)
+}
+inline std::string* GetWalletIdentifierReply::_internal_mutable_bip32masterkeyid() {
+  
+  return bip32masterkeyid_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* GetWalletIdentifierReply::release_bip32masterkeyid() {
+  // @@protoc_insertion_point(field_release:GetWalletIdentifierReply.bip32MasterKeyId)
+  
+  return bip32masterkeyid_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void GetWalletIdentifierReply::set_allocated_bip32masterkeyid(std::string* bip32masterkeyid) {
+  if (bip32masterkeyid != nullptr) {
+    
+  } else {
+    
+  }
+  bip32masterkeyid_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), bip32masterkeyid);
+  // @@protoc_insertion_point(field_set_allocated:GetWalletIdentifierReply.bip32MasterKeyId)
+}
+
+// -------------------------------------------------------------------
+
 // EccMultiplyRequest
 
 // string hdPath = 1;
@@ -5701,9 +6316,165 @@ inline void EccMultiplyReply::set_allocated_result(std::string* result) {
 
 // EraseDataRequest
 
+// -------------------------------------------------------------------
+
+// BitcoinSignRequest
+
+// bool testnet = 1;
+inline void BitcoinSignRequest::clear_testnet() {
+  testnet_ = false;
+}
+inline bool BitcoinSignRequest::_internal_testnet() const {
+  return testnet_;
+}
+inline bool BitcoinSignRequest::testnet() const {
+  // @@protoc_insertion_point(field_get:BitcoinSignRequest.testnet)
+  return _internal_testnet();
+}
+inline void BitcoinSignRequest::_internal_set_testnet(bool value) {
+  
+  testnet_ = value;
+}
+inline void BitcoinSignRequest::set_testnet(bool value) {
+  _internal_set_testnet(value);
+  // @@protoc_insertion_point(field_set:BitcoinSignRequest.testnet)
+}
+
+// bytes psbt = 2;
+inline void BitcoinSignRequest::clear_psbt() {
+  psbt_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& BitcoinSignRequest::psbt() const {
+  // @@protoc_insertion_point(field_get:BitcoinSignRequest.psbt)
+  return _internal_psbt();
+}
+inline void BitcoinSignRequest::set_psbt(const std::string& value) {
+  _internal_set_psbt(value);
+  // @@protoc_insertion_point(field_set:BitcoinSignRequest.psbt)
+}
+inline std::string* BitcoinSignRequest::mutable_psbt() {
+  // @@protoc_insertion_point(field_mutable:BitcoinSignRequest.psbt)
+  return _internal_mutable_psbt();
+}
+inline const std::string& BitcoinSignRequest::_internal_psbt() const {
+  return psbt_.GetNoArena();
+}
+inline void BitcoinSignRequest::_internal_set_psbt(const std::string& value) {
+  
+  psbt_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void BitcoinSignRequest::set_psbt(std::string&& value) {
+  
+  psbt_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BitcoinSignRequest.psbt)
+}
+inline void BitcoinSignRequest::set_psbt(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  psbt_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BitcoinSignRequest.psbt)
+}
+inline void BitcoinSignRequest::set_psbt(const void* value, size_t size) {
+  
+  psbt_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BitcoinSignRequest.psbt)
+}
+inline std::string* BitcoinSignRequest::_internal_mutable_psbt() {
+  
+  return psbt_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* BitcoinSignRequest::release_psbt() {
+  // @@protoc_insertion_point(field_release:BitcoinSignRequest.psbt)
+  
+  return psbt_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void BitcoinSignRequest::set_allocated_psbt(std::string* psbt) {
+  if (psbt != nullptr) {
+    
+  } else {
+    
+  }
+  psbt_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), psbt);
+  // @@protoc_insertion_point(field_set_allocated:BitcoinSignRequest.psbt)
+}
+
+// -------------------------------------------------------------------
+
+// BitcoinSignResult
+
+// bytes psbt = 1;
+inline void BitcoinSignResult::clear_psbt() {
+  psbt_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& BitcoinSignResult::psbt() const {
+  // @@protoc_insertion_point(field_get:BitcoinSignResult.psbt)
+  return _internal_psbt();
+}
+inline void BitcoinSignResult::set_psbt(const std::string& value) {
+  _internal_set_psbt(value);
+  // @@protoc_insertion_point(field_set:BitcoinSignResult.psbt)
+}
+inline std::string* BitcoinSignResult::mutable_psbt() {
+  // @@protoc_insertion_point(field_mutable:BitcoinSignResult.psbt)
+  return _internal_mutable_psbt();
+}
+inline const std::string& BitcoinSignResult::_internal_psbt() const {
+  return psbt_.GetNoArena();
+}
+inline void BitcoinSignResult::_internal_set_psbt(const std::string& value) {
+  
+  psbt_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void BitcoinSignResult::set_psbt(std::string&& value) {
+  
+  psbt_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BitcoinSignResult.psbt)
+}
+inline void BitcoinSignResult::set_psbt(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  psbt_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BitcoinSignResult.psbt)
+}
+inline void BitcoinSignResult::set_psbt(const void* value, size_t size) {
+  
+  psbt_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BitcoinSignResult.psbt)
+}
+inline std::string* BitcoinSignResult::_internal_mutable_psbt() {
+  
+  return psbt_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* BitcoinSignResult::release_psbt() {
+  // @@protoc_insertion_point(field_release:BitcoinSignResult.psbt)
+  
+  return psbt_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void BitcoinSignResult::set_allocated_psbt(std::string* psbt) {
+  if (psbt != nullptr) {
+    
+  } else {
+    
+  }
+  psbt_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), psbt);
+  // @@protoc_insertion_point(field_set_allocated:BitcoinSignResult.psbt)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
