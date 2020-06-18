@@ -24,7 +24,7 @@
 #define MsgTypeEccMultiplyRequest 19
 #define MsgTypeEccMultiplyReply 20
 #define MsgTypeBitcoinSignRequest 21
-#define MsgTypeEthereumSignRequest 22
+#define MsgTypeBitcoinSignResult 22
 #define MsgTypeGetWalletIdentifierRequest 23
 #define MsgTypeGetWalletIdentifierReply 24
 #define MsgTypeHighLimit 25
