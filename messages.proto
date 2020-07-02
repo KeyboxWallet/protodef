@@ -153,3 +153,12 @@ message BitcoinSignRequest {
 message BitcoinSignResult {
     bytes psbt = 1;    // bip174, partial signed bitcoin transaction, some inputs signed.
 }
+
+message EthereumSignRequest {
+    string hdPath = 1;
+    bytes unsignedTx = 2; // RLPencoded unsignedTx, EIP155 support
+}
+
+message EthereumSignResult {
+    bytes signedTx = 1;  // rawTransaction, ready for push to network.
+}

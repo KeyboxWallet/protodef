@@ -9439,6 +9439,663 @@ public final class KeyboxProtobuf {
     }
   }
 
+  public interface EthereumSignRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EthereumSignRequest)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <code>string hdPath = 1;</code>
+     * @return The hdPath.
+     */
+    java.lang.String getHdPath();
+    /**
+     * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
+     */
+    com.google.protobuf.ByteString
+        getHdPathBytes();
+
+    /**
+     * <pre>
+     * RLPencoded unsignedTx, EIP155 support
+     * </pre>
+     *
+     * <code>bytes unsignedTx = 2;</code>
+     * @return The unsignedTx.
+     */
+    com.google.protobuf.ByteString getUnsignedTx();
+  }
+  /**
+   * Protobuf type {@code EthereumSignRequest}
+   */
+  public  static final class EthereumSignRequest extends
+      com.google.protobuf.GeneratedMessageLite<
+          EthereumSignRequest, EthereumSignRequest.Builder> implements
+      // @@protoc_insertion_point(message_implements:EthereumSignRequest)
+      EthereumSignRequestOrBuilder {
+    private EthereumSignRequest() {
+      hdPath_ = "";
+      unsignedTx_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int HDPATH_FIELD_NUMBER = 1;
+    private java.lang.String hdPath_;
+    /**
+     * <code>string hdPath = 1;</code>
+     * @return The hdPath.
+     */
+    @java.lang.Override
+    public java.lang.String getHdPath() {
+      return hdPath_;
+    }
+    /**
+     * <code>string hdPath = 1;</code>
+     * @return The bytes for hdPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHdPathBytes() {
+      return com.google.protobuf.ByteString.copyFromUtf8(hdPath_);
+    }
+    /**
+     * <code>string hdPath = 1;</code>
+     * @param value The hdPath to set.
+     */
+    private void setHdPath(
+        java.lang.String value) {
+      value.getClass();
+  
+      hdPath_ = value;
+    }
+    /**
+     * <code>string hdPath = 1;</code>
+     */
+    private void clearHdPath() {
+      
+      hdPath_ = getDefaultInstance().getHdPath();
+    }
+    /**
+     * <code>string hdPath = 1;</code>
+     * @param value The bytes for hdPath to set.
+     */
+    private void setHdPathBytes(
+        com.google.protobuf.ByteString value) {
+      checkByteStringIsUtf8(value);
+      hdPath_ = value.toStringUtf8();
+      
+    }
+
+    public static final int UNSIGNEDTX_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString unsignedTx_;
+    /**
+     * <pre>
+     * RLPencoded unsignedTx, EIP155 support
+     * </pre>
+     *
+     * <code>bytes unsignedTx = 2;</code>
+     * @return The unsignedTx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getUnsignedTx() {
+      return unsignedTx_;
+    }
+    /**
+     * <pre>
+     * RLPencoded unsignedTx, EIP155 support
+     * </pre>
+     *
+     * <code>bytes unsignedTx = 2;</code>
+     * @param value The unsignedTx to set.
+     */
+    private void setUnsignedTx(com.google.protobuf.ByteString value) {
+      value.getClass();
+  
+      unsignedTx_ = value;
+    }
+    /**
+     * <pre>
+     * RLPencoded unsignedTx, EIP155 support
+     * </pre>
+     *
+     * <code>bytes unsignedTx = 2;</code>
+     */
+    private void clearUnsignedTx() {
+      
+      unsignedTx_ = getDefaultInstance().getUnsignedTx();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code EthereumSignRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest, Builder> implements
+        // @@protoc_insertion_point(builder_implements:EthereumSignRequest)
+        com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequestOrBuilder {
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <code>string hdPath = 1;</code>
+       * @return The hdPath.
+       */
+      @java.lang.Override
+      public java.lang.String getHdPath() {
+        return instance.getHdPath();
+      }
+      /**
+       * <code>string hdPath = 1;</code>
+       * @return The bytes for hdPath.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getHdPathBytes() {
+        return instance.getHdPathBytes();
+      }
+      /**
+       * <code>string hdPath = 1;</code>
+       * @param value The hdPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHdPath(
+          java.lang.String value) {
+        copyOnWrite();
+        instance.setHdPath(value);
+        return this;
+      }
+      /**
+       * <code>string hdPath = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHdPath() {
+        copyOnWrite();
+        instance.clearHdPath();
+        return this;
+      }
+      /**
+       * <code>string hdPath = 1;</code>
+       * @param value The bytes for hdPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHdPathBytes(
+          com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setHdPathBytes(value);
+        return this;
+      }
+
+      /**
+       * <pre>
+       * RLPencoded unsignedTx, EIP155 support
+       * </pre>
+       *
+       * <code>bytes unsignedTx = 2;</code>
+       * @return The unsignedTx.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getUnsignedTx() {
+        return instance.getUnsignedTx();
+      }
+      /**
+       * <pre>
+       * RLPencoded unsignedTx, EIP155 support
+       * </pre>
+       *
+       * <code>bytes unsignedTx = 2;</code>
+       * @param value The unsignedTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUnsignedTx(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setUnsignedTx(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * RLPencoded unsignedTx, EIP155 support
+       * </pre>
+       *
+       * <code>bytes unsignedTx = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUnsignedTx() {
+        copyOnWrite();
+        instance.clearUnsignedTx();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:EthereumSignRequest)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "hdPath_",
+              "unsignedTx_",
+            };
+            java.lang.String info =
+                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0208\u0002\n" +
+                "";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:EthereumSignRequest)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest DEFAULT_INSTANCE;
+    static {
+      EthereumSignRequest defaultInstance = new EthereumSignRequest();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EthereumSignRequest.class, defaultInstance);
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EthereumSignRequest> PARSER;
+
+    public static com.google.protobuf.Parser<EthereumSignRequest> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
+  public interface EthereumSignResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:EthereumSignResult)
+      com.google.protobuf.MessageLiteOrBuilder {
+
+    /**
+     * <pre>
+     * rawTransaction, ready for push to network.
+     * </pre>
+     *
+     * <code>bytes signedTx = 1;</code>
+     * @return The signedTx.
+     */
+    com.google.protobuf.ByteString getSignedTx();
+  }
+  /**
+   * Protobuf type {@code EthereumSignResult}
+   */
+  public  static final class EthereumSignResult extends
+      com.google.protobuf.GeneratedMessageLite<
+          EthereumSignResult, EthereumSignResult.Builder> implements
+      // @@protoc_insertion_point(message_implements:EthereumSignResult)
+      EthereumSignResultOrBuilder {
+    private EthereumSignResult() {
+      signedTx_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    public static final int SIGNEDTX_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString signedTx_;
+    /**
+     * <pre>
+     * rawTransaction, ready for push to network.
+     * </pre>
+     *
+     * <code>bytes signedTx = 1;</code>
+     * @return The signedTx.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignedTx() {
+      return signedTx_;
+    }
+    /**
+     * <pre>
+     * rawTransaction, ready for push to network.
+     * </pre>
+     *
+     * <code>bytes signedTx = 1;</code>
+     * @param value The signedTx to set.
+     */
+    private void setSignedTx(com.google.protobuf.ByteString value) {
+      value.getClass();
+  
+      signedTx_ = value;
+    }
+    /**
+     * <pre>
+     * rawTransaction, ready for push to network.
+     * </pre>
+     *
+     * <code>bytes signedTx = 1;</code>
+     */
+    private void clearSignedTx() {
+      
+      signedTx_ = getDefaultInstance().getSignedTx();
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, data, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return parseDelimitedFrom(DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input);
+    }
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageLite.parseFrom(
+          DEFAULT_INSTANCE, input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() {
+      return (Builder) DEFAULT_INSTANCE.createBuilder();
+    }
+    public static Builder newBuilder(com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult prototype) {
+      return (Builder) DEFAULT_INSTANCE.createBuilder(prototype);
+    }
+
+    /**
+     * Protobuf type {@code EthereumSignResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageLite.Builder<
+          com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult, Builder> implements
+        // @@protoc_insertion_point(builder_implements:EthereumSignResult)
+        com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResultOrBuilder {
+      // Construct using com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult.newBuilder()
+      private Builder() {
+        super(DEFAULT_INSTANCE);
+      }
+
+
+      /**
+       * <pre>
+       * rawTransaction, ready for push to network.
+       * </pre>
+       *
+       * <code>bytes signedTx = 1;</code>
+       * @return The signedTx.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignedTx() {
+        return instance.getSignedTx();
+      }
+      /**
+       * <pre>
+       * rawTransaction, ready for push to network.
+       * </pre>
+       *
+       * <code>bytes signedTx = 1;</code>
+       * @param value The signedTx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignedTx(com.google.protobuf.ByteString value) {
+        copyOnWrite();
+        instance.setSignedTx(value);
+        return this;
+      }
+      /**
+       * <pre>
+       * rawTransaction, ready for push to network.
+       * </pre>
+       *
+       * <code>bytes signedTx = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignedTx() {
+        copyOnWrite();
+        instance.clearSignedTx();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:EthereumSignResult)
+    }
+    @java.lang.Override
+    @java.lang.SuppressWarnings({"unchecked", "fallthrough"})
+    protected final java.lang.Object dynamicMethod(
+        com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,
+        java.lang.Object arg0, java.lang.Object arg1) {
+      switch (method) {
+        case NEW_MUTABLE_INSTANCE: {
+          return new com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult();
+        }
+        case NEW_BUILDER: {
+          return new Builder();
+        }
+        case BUILD_MESSAGE_INFO: {
+            java.lang.Object[] objects = new java.lang.Object[] {
+              "signedTx_",
+            };
+            java.lang.String info =
+                "\u0000\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0001\n";
+            return newMessageInfo(DEFAULT_INSTANCE, info, objects);
+        }
+        // fall through
+        case GET_DEFAULT_INSTANCE: {
+          return DEFAULT_INSTANCE;
+        }
+        case GET_PARSER: {
+          com.google.protobuf.Parser<com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult> parser = PARSER;
+          if (parser == null) {
+            synchronized (com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult.class) {
+              parser = PARSER;
+              if (parser == null) {
+                parser =
+                    new DefaultInstanceBasedParser<com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult>(
+                        DEFAULT_INSTANCE);
+                PARSER = parser;
+              }
+            }
+          }
+          return parser;
+      }
+      case GET_MEMOIZED_IS_INITIALIZED: {
+        return (byte) 1;
+      }
+      case SET_MEMOIZED_IS_INITIALIZED: {
+        return null;
+      }
+      }
+      throw new UnsupportedOperationException();
+    }
+
+
+    // @@protoc_insertion_point(class_scope:EthereumSignResult)
+    private static final com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult DEFAULT_INSTANCE;
+    static {
+      EthereumSignResult defaultInstance = new EthereumSignResult();
+      // New instances are implicitly immutable so no need to make
+      // immutable.
+      DEFAULT_INSTANCE = defaultInstance;
+      com.google.protobuf.GeneratedMessageLite.registerDefaultInstance(
+        EthereumSignResult.class, defaultInstance);
+    }
+
+    public static com.keybox.plugins.wallet.KeyboxProtobuf.EthereumSignResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static volatile com.google.protobuf.Parser<EthereumSignResult> PARSER;
+
+    public static com.google.protobuf.Parser<EthereumSignResult> parser() {
+      return DEFAULT_INSTANCE.getParserForType();
+    }
+  }
+
 
   static {
   }

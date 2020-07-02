@@ -25,5 +25,7 @@ module.exports = {
     MsgTypeBitcoinSignResult: 22,
     MsgTypeGetWalletIdentifierRequest: 23,
     MsgTypeGetWalletIdentifierReply: 24,
-    MsgTypeHighLimit: 25, // for compare
+    MsgTypeEthereumSignRequest: 25,
+    MsgTypeEthereumSignResult: 26,
+    MsgTypeHighLimit: 27, // for compare
 };

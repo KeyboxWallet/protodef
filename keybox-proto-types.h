@@ -27,6 +27,8 @@
 #define MsgTypeBitcoinSignResult 22
 #define MsgTypeGetWalletIdentifierRequest 23
 #define MsgTypeGetWalletIdentifierReply 24
-#define MsgTypeHighLimit 25
+#define MsgTypeEthereumSignRequest 25
+#define MsgTypeEthereumSignResult 26
+#define MsgTypeHighLimit 27
 
 #endif
