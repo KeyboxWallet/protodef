@@ -338,6 +338,132 @@ public final class KeyboxProtobuf {
     // @@protoc_insertion_point(enum_scope:EccAlgorithm)
   }
 
+  /**
+   * Protobuf enum {@code BtcLikeCoins}
+   */
+  public enum BtcLikeCoins
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>BITCOIN = 0;</code>
+     */
+    BITCOIN(0),
+    /**
+     * <code>LITECOIN = 1;</code>
+     */
+    LITECOIN(1),
+    /**
+     * <code>DASH = 2;</code>
+     */
+    DASH(2),
+    /**
+     * <code>BITCOINCASH = 3;</code>
+     */
+    BITCOINCASH(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>BITCOIN = 0;</code>
+     */
+    public static final int BITCOIN_VALUE = 0;
+    /**
+     * <code>LITECOIN = 1;</code>
+     */
+    public static final int LITECOIN_VALUE = 1;
+    /**
+     * <code>DASH = 2;</code>
+     */
+    public static final int DASH_VALUE = 2;
+    /**
+     * <code>BITCOINCASH = 3;</code>
+     */
+    public static final int BITCOINCASH_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static BtcLikeCoins valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static BtcLikeCoins forNumber(int value) {
+      switch (value) {
+        case 0: return BITCOIN;
+        case 1: return LITECOIN;
+        case 2: return DASH;
+        case 3: return BITCOINCASH;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<BtcLikeCoins>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        BtcLikeCoins> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<BtcLikeCoins>() {
+            public BtcLikeCoins findValueByNumber(int number) {
+              return BtcLikeCoins.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.keybox.plugins.wallet.KeyboxProtobuf.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final BtcLikeCoins[] VALUES = values();
+
+    public static BtcLikeCoins valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private BtcLikeCoins(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:BtcLikeCoins)
+  }
+
   public interface RequestRejectedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:RequestRejected)
       com.google.protobuf.MessageOrBuilder {
@@ -15083,6 +15209,17 @@ public final class KeyboxProtobuf {
      * @return The psbt.
      */
     com.google.protobuf.ByteString getPsbt();
+
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The enum numeric value on the wire for coin.
+     */
+    int getCoinValue();
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The coin.
+     */
+    com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins getCoin();
   }
   /**
    * Protobuf type {@code BitcoinSignRequest}
@@ -15098,6 +15235,7 @@ public final class KeyboxProtobuf {
     }
     private BitcoinSignRequest() {
       psbt_ = com.google.protobuf.ByteString.EMPTY;
+      coin_ = 0;
     }
 
     @java.lang.Override
@@ -15138,6 +15276,12 @@ public final class KeyboxProtobuf {
             case 18: {
 
               psbt_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              coin_ = rawValue;
               break;
             }
             default: {
@@ -15198,6 +15342,25 @@ public final class KeyboxProtobuf {
       return psbt_;
     }
 
+    public static final int COIN_FIELD_NUMBER = 3;
+    private int coin_;
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The enum numeric value on the wire for coin.
+     */
+    @java.lang.Override public int getCoinValue() {
+      return coin_;
+    }
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The coin.
+     */
+    @java.lang.Override public com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins getCoin() {
+      @SuppressWarnings("deprecation")
+      com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins result = com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.valueOf(coin_);
+      return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15218,6 +15381,9 @@ public final class KeyboxProtobuf {
       if (!psbt_.isEmpty()) {
         output.writeBytes(2, psbt_);
       }
+      if (coin_ != com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.BITCOIN.getNumber()) {
+        output.writeEnum(3, coin_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15234,6 +15400,10 @@ public final class KeyboxProtobuf {
       if (!psbt_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, psbt_);
+      }
+      if (coin_ != com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.BITCOIN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, coin_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15254,6 +15424,7 @@ public final class KeyboxProtobuf {
           != other.getTestnet()) return false;
       if (!getPsbt()
           .equals(other.getPsbt())) return false;
+      if (coin_ != other.coin_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15270,6 +15441,8 @@ public final class KeyboxProtobuf {
           getTestnet());
       hash = (37 * hash) + PSBT_FIELD_NUMBER;
       hash = (53 * hash) + getPsbt().hashCode();
+      hash = (37 * hash) + COIN_FIELD_NUMBER;
+      hash = (53 * hash) + coin_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15407,6 +15580,8 @@ public final class KeyboxProtobuf {
 
         psbt_ = com.google.protobuf.ByteString.EMPTY;
 
+        coin_ = 0;
+
         return this;
       }
 
@@ -15435,6 +15610,7 @@ public final class KeyboxProtobuf {
         com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest result = new com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest(this);
         result.testnet_ = testnet_;
         result.psbt_ = psbt_;
+        result.coin_ = coin_;
         onBuilt();
         return result;
       }
@@ -15488,6 +15664,9 @@ public final class KeyboxProtobuf {
         }
         if (other.getPsbt() != com.google.protobuf.ByteString.EMPTY) {
           setPsbt(other.getPsbt());
+        }
+        if (other.coin_ != 0) {
+          setCoinValue(other.getCoinValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15591,6 +15770,60 @@ public final class KeyboxProtobuf {
       public Builder clearPsbt() {
         
         psbt_ = getDefaultInstance().getPsbt();
+        onChanged();
+        return this;
+      }
+
+      private int coin_ = 0;
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @return The enum numeric value on the wire for coin.
+       */
+      @java.lang.Override public int getCoinValue() {
+        return coin_;
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @param value The enum numeric value on the wire for coin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoinValue(int value) {
+        
+        coin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @return The coin.
+       */
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins getCoin() {
+        @SuppressWarnings("deprecation")
+        com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins result = com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.valueOf(coin_);
+        return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @param value The coin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoin(com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        coin_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCoin() {
+        
+        coin_ = 0;
         onChanged();
         return this;
       }
@@ -17512,16 +17745,19 @@ public final class KeyboxProtobuf {
       "tiplyReply\022\016\n\006hdPath\030\001 \001(\t\022 \n\talgorithm\030" +
       "\002 \001(\0162\r.EccAlgorithm\022\024\n\014input_pubkey\030\003 \001" +
       "(\014\022\022\n\ndev_pubkey\030\004 \001(\014\022\016\n\006result\030\005 \001(\014\"\022" +
-      "\n\020EraseDataRequest\"3\n\022BitcoinSignRequest" +
-      "\022\017\n\007testnet\030\001 \001(\010\022\014\n\004psbt\030\002 \001(\014\"!\n\021Bitco" +
-      "inSignResult\022\014\n\004psbt\030\001 \001(\014\"9\n\023EthereumSi" +
-      "gnRequest\022\016\n\006hdPath\030\001 \001(\t\022\022\n\nunsignedTx\030" +
-      "\002 \001(\014\"&\n\022EthereumSignResult\022\020\n\010signedTx\030" +
-      "\001 \001(\014*/\n\nDeviceMode\022\023\n\017MODE_BOOTLOADER\020\000" +
-      "\022\014\n\010MODE_APP\020\001*2\n\tLockState\022\013\n\007UNKNOWN\020\000" +
-      "\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002*\035\n\014EccAlgorit" +
-      "hm\022\r\n\tSECP256K1\020\000B+\n\031com.keybox.plugins." +
-      "walletB\016KeyboxProtobufb\006proto3"
+      "\n\020EraseDataRequest\"P\n\022BitcoinSignRequest" +
+      "\022\017\n\007testnet\030\001 \001(\010\022\014\n\004psbt\030\002 \001(\014\022\033\n\004coin\030" +
+      "\003 \001(\0162\r.BtcLikeCoins\"!\n\021BitcoinSignResul" +
+      "t\022\014\n\004psbt\030\001 \001(\014\"9\n\023EthereumSignRequest\022\016" +
+      "\n\006hdPath\030\001 \001(\t\022\022\n\nunsignedTx\030\002 \001(\014\"&\n\022Et" +
+      "hereumSignResult\022\020\n\010signedTx\030\001 \001(\014*/\n\nDe" +
+      "viceMode\022\023\n\017MODE_BOOTLOADER\020\000\022\014\n\010MODE_AP" +
+      "P\020\001*2\n\tLockState\022\013\n\007UNKNOWN\020\000\022\014\n\010UNLOCKE" +
+      "D\020\001\022\n\n\006LOCKED\020\002*\035\n\014EccAlgorithm\022\r\n\tSECP2" +
+      "56K1\020\000*D\n\014BtcLikeCoins\022\013\n\007BITCOIN\020\000\022\014\n\010L" +
+      "ITECOIN\020\001\022\010\n\004DASH\020\002\022\017\n\013BITCOINCASH\020\003B+\n\031" +
+      "com.keybox.plugins.walletB\016KeyboxProtobu" +
+      "fb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17664,7 +17900,7 @@ public final class KeyboxProtobuf {
     internal_static_BitcoinSignRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BitcoinSignRequest_descriptor,
-        new java.lang.String[] { "Testnet", "Psbt", });
+        new java.lang.String[] { "Testnet", "Psbt", "Coin", });
     internal_static_BitcoinSignResult_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_BitcoinSignResult_fieldAccessorTable = new

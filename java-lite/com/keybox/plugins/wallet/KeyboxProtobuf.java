@@ -275,6 +275,113 @@ public final class KeyboxProtobuf {
     // @@protoc_insertion_point(enum_scope:EccAlgorithm)
   }
 
+  /**
+   * Protobuf enum {@code BtcLikeCoins}
+   */
+  public enum BtcLikeCoins
+      implements com.google.protobuf.Internal.EnumLite {
+    /**
+     * <code>BITCOIN = 0;</code>
+     */
+    BITCOIN(0),
+    /**
+     * <code>LITECOIN = 1;</code>
+     */
+    LITECOIN(1),
+    /**
+     * <code>DASH = 2;</code>
+     */
+    DASH(2),
+    /**
+     * <code>BITCOINCASH = 3;</code>
+     */
+    BITCOINCASH(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>BITCOIN = 0;</code>
+     */
+    public static final int BITCOIN_VALUE = 0;
+    /**
+     * <code>LITECOIN = 1;</code>
+     */
+    public static final int LITECOIN_VALUE = 1;
+    /**
+     * <code>DASH = 2;</code>
+     */
+    public static final int DASH_VALUE = 2;
+    /**
+     * <code>BITCOINCASH = 3;</code>
+     */
+    public static final int BITCOINCASH_VALUE = 3;
+
+
+    @java.lang.Override
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The number of the enum to look for.
+     * @return The enum associated with the given number.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static BtcLikeCoins valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static BtcLikeCoins forNumber(int value) {
+      switch (value) {
+        case 0: return BITCOIN;
+        case 1: return LITECOIN;
+        case 2: return DASH;
+        case 3: return BITCOINCASH;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<BtcLikeCoins>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        BtcLikeCoins> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<BtcLikeCoins>() {
+            @java.lang.Override
+            public BtcLikeCoins findValueByNumber(int number) {
+              return BtcLikeCoins.forNumber(number);
+            }
+          };
+
+    public static com.google.protobuf.Internal.EnumVerifier 
+        internalGetVerifier() {
+      return BtcLikeCoinsVerifier.INSTANCE;
+    }
+
+    private static final class BtcLikeCoinsVerifier implements 
+         com.google.protobuf.Internal.EnumVerifier { 
+            static final com.google.protobuf.Internal.EnumVerifier           INSTANCE = new BtcLikeCoinsVerifier();
+            @java.lang.Override
+            public boolean isInRange(int number) {
+              return BtcLikeCoins.forNumber(number) != null;
+            }
+          };
+
+    private final int value;
+
+    private BtcLikeCoins(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:BtcLikeCoins)
+  }
+
   public interface RequestRejectedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:RequestRejected)
       com.google.protobuf.MessageLiteOrBuilder {
@@ -8850,6 +8957,17 @@ public final class KeyboxProtobuf {
      * @return The psbt.
      */
     com.google.protobuf.ByteString getPsbt();
+
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The enum numeric value on the wire for coin.
+     */
+    int getCoinValue();
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The coin.
+     */
+    com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins getCoin();
   }
   /**
    * Protobuf type {@code BitcoinSignRequest}
@@ -8925,6 +9043,48 @@ public final class KeyboxProtobuf {
     private void clearPsbt() {
       
       psbt_ = getDefaultInstance().getPsbt();
+    }
+
+    public static final int COIN_FIELD_NUMBER = 3;
+    private int coin_;
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The enum numeric value on the wire for coin.
+     */
+    @java.lang.Override
+    public int getCoinValue() {
+      return coin_;
+    }
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @return The coin.
+     */
+    @java.lang.Override
+    public com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins getCoin() {
+      com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins result = com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.forNumber(coin_);
+      return result == null ? com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @param value The enum numeric value on the wire for coin to set.
+     */
+    private void setCoinValue(int value) {
+        coin_ = value;
+    }
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     * @param value The coin to set.
+     */
+    private void setCoin(com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins value) {
+      coin_ = value.getNumber();
+      
+    }
+    /**
+     * <code>.BtcLikeCoins coin = 3;</code>
+     */
+    private void clearCoin() {
+      
+      coin_ = 0;
     }
 
     public static com.keybox.plugins.wallet.KeyboxProtobuf.BitcoinSignRequest parseFrom(
@@ -9090,6 +9250,52 @@ public final class KeyboxProtobuf {
         return this;
       }
 
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @return The enum numeric value on the wire for coin.
+       */
+      @java.lang.Override
+      public int getCoinValue() {
+        return instance.getCoinValue();
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @param value The coin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoinValue(int value) {
+        copyOnWrite();
+        instance.setCoinValue(value);
+        return this;
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @return The coin.
+       */
+      @java.lang.Override
+      public com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins getCoin() {
+        return instance.getCoin();
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @param value The enum numeric value on the wire for coin to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCoin(com.keybox.plugins.wallet.KeyboxProtobuf.BtcLikeCoins value) {
+        copyOnWrite();
+        instance.setCoin(value);
+        return this;
+      }
+      /**
+       * <code>.BtcLikeCoins coin = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCoin() {
+        copyOnWrite();
+        instance.clearCoin();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:BitcoinSignRequest)
     }
     @java.lang.Override
@@ -9108,10 +9314,11 @@ public final class KeyboxProtobuf {
             java.lang.Object[] objects = new java.lang.Object[] {
               "testnet_",
               "psbt_",
+              "coin_",
             };
             java.lang.String info =
-                "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u0007\u0002\n" +
-                "";
+                "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0007\u0002\n" +
+                "\u0003\f";
             return newMessageInfo(DEFAULT_INSTANCE, info, objects);
         }
         // fall through

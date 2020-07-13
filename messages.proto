@@ -145,9 +145,18 @@ message EraseDataRequest {
 
 }
 
+enum BtcLikeCoins
+{
+    BITCOIN = 0;
+    LITECOIN = 1;
+    DASH = 2;
+    BITCOINCASH = 3;
+}
+
 message BitcoinSignRequest {
     bool testnet = 1;
     bytes psbt = 2;    // bip174, partial signed bitcoin transaction, input updated if needed.
+    BtcLikeCoins coin = 3;
 }
 
 message BitcoinSignResult {
